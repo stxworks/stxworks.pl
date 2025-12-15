@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://greenspace.pl/sitemap.xml
+
+# Portfolio strona ogrodnicza
+# GreenSpace - projektowanie i pielęgnacja ogrodów

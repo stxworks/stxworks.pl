@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Blog GreenSpace - porady ogrodnicze, inspiracje i nowości ze świata ogrodnictwa. Dowiedz się jak dbać o swój ogród przez cały rok." />
+    <meta name="keywords" content="blog ogrodniczy, porady ogrodnicze, pielęgnacja ogrodu, inspiracje ogrodowe" />
+    <title>Blog | GreenSpace - Porady i Inspiracje Ogrodnicze</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <meta property="og:title" content="Blog - GreenSpace" />
+    <meta property="og:description" content="Porady ogrodnicze, inspiracje i nowości ze świata ogrodnictwa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greenspace.pl/blog.html" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/enhanced-effects.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .blog-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-card h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .blog-excerpt {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .blog-read-more:hover {
+            gap: 0.75rem;
+        }
+
+        .blog-featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .blog-featured .blog-card-image {
+            height: 100%;
+            min-height: 350px;
+        }
+
+        .blog-featured .blog-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2.5rem;
+        }
+
+        .blog-featured h3 {
+            font-size: 1.75rem;
+        }
+
+        .blog-sidebar {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-section h4 {
+            color: var(--dark);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .category-list .count {
+            background: var(--light);
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 992px) {
+            .blog-featured {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-featured .blog-card-image {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-featured .blog-card-content {
+                padding: 1.5rem;
+            }
+
+            .blog-featured h3 {
+                font-size: 1.35rem;
+            }
+
+            .blog-newsletter-cta {
+                padding: 2rem 1.25rem;
+            }
+
+            .blog-newsletter-form {
+                flex-direction: column;
+            }
+
+            .blog-newsletter-form input {
+                min-width: 100%;
+            }
+
+            .blog-newsletter-form .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Start</a>
+                <span>/</span>
+                <span>Blog</span>
+            </div>
+            <h1 class="hero-title">Blog</h1>
+            <p class="hero-subtitle">Porady, inspiracje i nowości ze świata ogrodnictwa</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card blog-featured">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Przygotowanie ogrodu do zimy" loading="lazy" />
+                        <span class="blog-category">Sezonowe</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 5 grudnia 2025</span>
+                            <span><i class="far fa-clock"></i> 8 min czytania</span>
+                        </div>
+                        <h3><a href="#">Jak przygotować ogród do zimy? Kompletny przewodnik</a></h3>
+                        <p class="blog-excerpt">
+                            Zima to czas, kiedy Twój ogród potrzebuje specjalnej ochrony. W tym artykule
+                            przedstawiamy krok po kroku, jak zabezpieczyć rośliny, trawnik i elementy
+                            małej architektury przed mrozem i śniegiem. Dowiedz się, które prace są
+                            niezbędne jesienią, aby wiosną cieszyć się zdrowym ogrodem.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Nowoczesne trendy w projektowaniu ogrodów" loading="lazy" />
+                        <span class="blog-category">Inspiracje</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 28 listopada 2025</span>
+                            <span><i class="far fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3><a href="#">5 trendów w projektowaniu ogrodów na 2025 rok</a></h3>
+                        <p class="blog-excerpt">
+                            Odkryj najgorętsze trendy w architekturze krajobrazu. Od ogrodów
+                            deszczowych po strefy bioróżnorodności...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Mały ogród miejski" loading="lazy" />
+                        <span class="blog-category">Porady</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 15 listopada 2025</span>
+                            <span><i class="far fa-clock"></i> 6 min</span>
+                        </div>
+                        <h3><a href="#">Jak urządzić mały ogród? 10 sprawdzonych trików</a></h3>
+                        <p class="blog-excerpt">
+                            Nawet najmniejsza przestrzeń może stać się zielonym rajem. Poznaj
+                            profesjonalne triki optycznego powiększania ogrodu...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Automatyczne nawadnianie" loading="lazy" />
+                        <span class="blog-category">Technologia</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 2 listopada 2025</span>
+                            <span><i class="far fa-clock"></i> 7 min</span>
+                        </div>
+                        <h3><a href="#">Automatyczne nawadnianie – czy warto inwestować?</a></h3>
+                        <p class="blog-excerpt">
+                            Systemy nawadniania to nie tylko wygoda, ale też oszczędność wody.
+                            Sprawdź, jakie rozwiązanie będzie najlepsze dla Twojego ogrodu...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Rośliny odporne na suszę" loading="lazy" />
+                        <span class="blog-category">Rośliny</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 20 października 2025</span>
+                            <span><i class="far fa-clock"></i> 4 min</span>
+                        </div>
+                        <h3><a href="#">15 roślin odpornych na suszę do Twojego ogrodu</a></h3>
+                        <p class="blog-excerpt">
+                            Zmiany klimatu wymuszają nowe podejście do doboru roślin.
+                            Przedstawiamy gatunki, które wyglądają pięknie i są odporne...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.pexels.com/photos/589820/pexels-photo-589820.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Oświetlenie ogrodowe" loading="lazy" />
+                        <span class="blog-category">Aranżacje</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 8 października 2025</span>
+                            <span><i class="far fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3><a href="#">Oświetlenie ogrodowe – praktyczne i klimatyczne</a></h3>
+                        <p class="blog-excerpt">
+                            Odpowiednie oświetlenie przedłuża korzystanie z ogrodu do późnych
+                            godzin. Poznaj najlepsze rozwiązania LED...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Czytaj dalej <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Newsletter CTA -->
+            <div class="blog-newsletter-cta"
+                style="margin-top: 4rem; text-align: center; padding: 3rem; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 20px; color: var(--white);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Chcesz więcej porad?</h3>
+                <p style="opacity: 0.9; margin-bottom: 1.5rem;">Zapisz się do newslettera i otrzymuj najnowsze artykuły
+                    prosto na swoją skrzynkę</p>
+                <form id="newsletterForm" class="blog-newsletter-form"
+                    style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                    <input type="email" placeholder="Twój adres email" required
+                        style="flex: 1; min-width: 200px; padding: 1rem 1.5rem; border: none; border-radius: 50px; font-size: 1rem;" />
+                    <button type="submit" class="btn btn-secondary" style="white-space: nowrap;">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Zapisz się
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ultra.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+
+</html>

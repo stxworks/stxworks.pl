@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Regulamin i informacje o projekcie demonstracyjnym GreenSpace - portfolio STX Works." />
+    <meta name="keywords" content="regulamin, projekt demonstracyjny, portfolio, STX Works" />
+    <title>Regulamin | GreenSpace - Projekt Demonstracyjny</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Regulamin - GreenSpace" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/enhanced-effects.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-content h2 {
+            color: var(--primary-dark);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .legal-content p,
+        .legal-content li {
+            color: var(--gray-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .info-box.warning {
+            border-left-color: var(--warning);
+            background: rgba(243, 156, 18, 0.1);
+        }
+
+        .info-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .info-box p {
+            margin: 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Dark mode */
+        [data-theme="dark"] .legal-content h2 {
+            color: var(--secondary-color);
+        }
+
+        [data-theme="dark"] .legal-content p,
+        [data-theme="dark"] .legal-content li {
+            color: #b0b0b0;
+        }
+
+        [data-theme="dark"] .info-box {
+            background: #1e1e1e;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        [data-theme="dark"] .info-box.warning {
+            background: rgba(243, 156, 18, 0.15);
+            border-color: rgba(243, 156, 18, 0.3);
+        }
+
+        [data-theme="dark"] .info-box h3 {
+            color: #f0f0f0;
+        }
+
+        [data-theme="dark"] .info-box p {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Start</a>
+                <span>/</span>
+                <span>Regulamin</span>
+            </div>
+            <h1 class="hero-title">Regulamin</h1>
+            <p class="hero-subtitle">Informacje o projekcie demonstracyjnym</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="section">
+        <div class="container">
+            <div class="legal-content">
+
+                <div class="info-box warning">
+                    <h3><i class="fas fa-exclamation-triangle" style="margin-right: 0.5rem;"></i> Projekt demonstracyjny
+                    </h3>
+                    <p>
+                        Niniejsza strona internetowa jest <strong>fikcyjnym projektem</strong> stworzonym w celach
+                        demonstracyjnych jako element portfolio. Firma "GreenSpace" nie istnieje, a wszelkie dane
+                        kontaktowe, adresy, numery telefonów i informacje o usługach są fikcyjne.
+                    </p>
+                </div>
+
+                <h2>1. Informacje o projekcie</h2>
+                <p>
+                    Strona "GreenSpace" została stworzona przez <strong>STX Works</strong> jako projekt portfolio,
+                    mający na celu demonstrację umiejętności w zakresie tworzenia stron internetowych.
+                </p>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-code" style="margin-right: 0.5rem;"></i> Wykorzystane technologie</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Responsive Design</span>
+                        <span class="tech-badge">Dark Mode</span>
+                        <span class="tech-badge">CSS Animations</span>
+                    </div>
+                </div>
+
+                <h2>2. Cel projektu</h2>
+                <p>Projekt służy do prezentacji następujących umiejętności:</p>
+                <ul>
+                    <li>Tworzenie responsywnych stron internetowych</li>
+                    <li>Implementacja nowoczesnych efektów CSS (animacje, parallax, glassmorphism)</li>
+                    <li>Programowanie w JavaScript (dynamiczne komponenty, localStorage, interakcje)</li>
+                    <li>Optymalizacja SEO i dostępności (accessibility)</li>
+                    <li>Implementacja trybu ciemnego (dark mode)</li>
+                    <li>Zarządzanie cookies i zgoda RODO</li>
+                </ul>
+
+                <h2>3. Dane i formularze</h2>
+                <p>
+                    <strong>Formularz kontaktowy na tej stronie nie wysyła żadnych danych.</strong>
+                    Służy wyłącznie do demonstracji funkcjonalności front-endowych, takich jak walidacja pól
+                    i animacje interfejsu użytkownika.
+                </p>
+                <p>
+                    Jedyne dane przechowywane lokalnie (w przeglądarce użytkownika) to:
+                </p>
+                <ul>
+                    <li>Preferencje motywu (jasny/ciemny) - localStorage</li>
+                    <li>Ustawienia cookies - localStorage</li>
+                </ul>
+                <p>
+                    Żadne dane nie są przesyłane na zewnętrzne serwery.
+                </p>
+
+                <h2>4. Grafiki i zdjęcia</h2>
+                <p>
+                    Wszystkie zdjęcia wykorzystane na stronie zostały wygenerowane przez <strong>sztuczną
+                        inteligencję</strong>, w oparciu o model <strong>Nano Banana 3 Pro</strong>.
+                    Żadne z przedstawionych zdjęć nie przedstawia rzeczywistych miejsc ani osób.
+                </p>
+
+                <h2>5. Prawa autorskie</h2>
+                <p>
+                    Kod źródłowy tej strony jest własnością STX Works. Projekt został stworzony jako
+                    demonstracja umiejętności programistycznych i może być wykorzystywany w celach
+                    edukacyjnych.
+                </p>
+
+                <h2>6. Kontakt</h2>
+                <p>
+                    W sprawie projektu można skontaktować się poprzez:
+                </p>
+                <ul>
+                    <li><strong>Portfolio:</strong> STX Works</li>
+                </ul>
+
+                <div class="info-box" style="margin-top: 3rem; text-align: center;">
+                    <p style="margin-bottom: 1rem;">
+                        <i class="fas fa-leaf" style="color: var(--primary-color); font-size: 2rem;"></i>
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--gray);">
+                        Dziękujemy za odwiedzenie projektu demonstracyjnego GreenSpace.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ultra.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+
+</html>

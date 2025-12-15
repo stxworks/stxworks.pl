@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Skontaktuj się z GreenSpace - bezpłatna wycena usług ogrodniczych. Projektowanie i zakładanie ogrodów w Warszawie i okolicach." />
+    <meta name="keywords" content="kontakt ogrodnik, wycena ogrodu, usługi ogrodnicze Warszawa" />
+    <title>Kontakt | GreenSpace - Bezpłatna Wycena Ogrodu</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kontakt - GreenSpace" />
+    <meta property="og:description"
+        content="Skontaktuj się z nami i otrzymaj bezpłatną wycenę. Projektowanie i zakładanie ogrodów." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greenspace.pl/kontakt.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Kontakt - GreenSpace" />
+    <meta name="twitter:description" content="Skontaktuj się z nami i otrzymaj bezpłatną wycenę." />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/enhanced-effects.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Start</a>
+                <span>/</span>
+                <span>Kontakt</span>
+            </div>
+            <h1 class="hero-title">Kontakt</h1>
+            <p class="hero-subtitle">Porozmawiajmy o Twoim wymarzonym ogrodzie</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Demo Warning Banner -->
+            <div class="demo-warning-banner">
+                <h4>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Projekt demonstracyjny
+                </h4>
+                <p>
+                    Ta strona jest <strong>fikcyjnym projektem portfolio</strong> stworzonym przez STX Works.
+                    Firma "GreenSpace" nie istnieje, a wszystkie dane kontaktowe (telefon, email, adres) są fikcyjne.
+                    Formularz kontaktowy <strong>nie wysyła żadnych danych</strong> - służy tylko do demonstracji
+                    funkcjonalności.
+                    <a href="polityka-prywatnosci.html">Więcej informacji →</a>
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Dane kontaktowe</h3>
+
+                    <div class="contact-items-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:kontakt@greenspace.pl">kontakt@greenspace.pl</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adres</h4>
+                                <p>ul. Ogrodowa 15<br />00-001 Warszawa</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Godziny pracy</h4>
+                                <p>Pon-Pt: 8:00 - 18:00<br />Sob: 9:00 - 14:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links" style="margin-top: 2rem;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark);">Wyślij wiadomość</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jan Kowalski" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="jan@example.com" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Wybierz usługę</label>
+                            <select id="service" name="service">
+                                <option value="">-- Wybierz --</option>
+                                <option value="design">Projektowanie ogrodów</option>
+                                <option value="creation">Zakładanie ogrodów</option>
+                                <option value="maintenance">Pielęgnacja ogrodów</option>
+                                <option value="irrigation">Systemy nawadniania</option>
+                                <option value="lighting">Oświetlenie ogrodowe</option>
+                                <option value="consultation">Konsultacja</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Przybliżona powierzchnia działki</label>
+                        <select id="area" name="area">
+                            <option value="">-- Wybierz --</option>
+                            <option value="small">Do 300 m²</option>
+                            <option value="medium">300 - 500 m²</option>
+                            <option value="large">500 - 1000 m²</option>
+                            <option value="xlarge">Powyżej 1000 m²</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Wiadomość *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Opisz swój projekt lub zadaj pytanie..."></textarea>
+                    </div>
+
+                    <!-- Honeypot field - ukryte, wypełnione = bot -->
+                    <div class="form-group" style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;"
+                        aria-hidden="true">
+                        <label for="website">Pozostaw puste</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                    </div>
+
+                    <div class="form-group consent-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="consent" id="consent" required />
+                            <span class="checkbox-mark">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="checkbox-label">
+                                Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie.
+                                <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span class="btn-text">
+                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                            Wyślij Wiadomość
+                        </span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>
+                            Wysyłanie...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section">
+        <div class="container">
+            <div class="map-container">
+                <!-- Placeholder dla mapy -->
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Mapa lokalizacji</p>
+                    <p style="font-size: 0.9rem;">ul. Ogrodowa 15, 00-001 Warszawa</p>
+                </div>
+                <!-- Można zamienić na iframe z Google Maps:
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.9!2d21.0!3d52.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUG9sYW5k!5e0!3m2!1spl!2spl!4v16!5m2!1spl!2spl" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+          -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Mini -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Szybkie Pytania</h2>
+            </div>
+
+            <div class="accordion" style="max-width: 700px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Jak szybko otrzymam odpowiedź?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Staramy się odpowiadać na wszystkie zapytania w ciągu 24 godzin w dni robocze. W pilnych
+                            sprawach zalecamy kontakt telefoniczny.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Czy wycena jest bezpłatna?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Tak! Wstępna wycena i konsultacja są zawsze bezpłatne. Dla większych projektów umawiamy
+                            wizytę na miejscu.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Jaki jest obszar Waszego działania?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Głównie działamy w Warszawie i okolicach (do 50 km). Dla większych projektów jesteśmy gotowi
+                            wyjechać w dowolne miejsce w kraju.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ultra.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+
+</html>

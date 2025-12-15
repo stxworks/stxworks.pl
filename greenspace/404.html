@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>404 - Strona nie znaleziona | GreenSpace</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="description" content="Przepraszamy, ta strona nie istnieje." />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/enhanced-effects.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-content {
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 20vw, 12rem);
+            font-weight: 800;
+            color: var(--white);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: -2rem;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .error-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .error-links h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .error-links ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .error-links a:hover {
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <i class="fas fa-seedling error-icon"></i>
+            <h1 class="error-title">Ups! Ta strona nie istnieje</h1>
+            <p class="error-text">
+                Wygląda na to, że zabłądziłeś w ogrodzie. Strona, której szukasz,
+                mogła zostać przeniesiona lub usunięta. Ale nie martw się –
+                pomożemy Ci znaleźć drogę powrotną!
+            </p>
+
+            <div class="error-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                    Strona główna
+                </a>
+                <a href="kontakt.html" class="btn btn-secondary">
+                    <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
+                    Kontakt
+                </a>
+            </div>
+
+            <div class="error-links">
+                <h4>Może szukasz:</h4>
+                <ul>
+                    <li><a href="uslugi.html">Nasze usługi</a></li>
+                    <li><a href="galeria.html">Galeria realizacji</a></li>
+                    <li><a href="cennik.html">Cennik</a></li>
+                    <li><a href="o-nas.html">O nas</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/ultra.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+
+</html>
