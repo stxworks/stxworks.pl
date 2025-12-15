@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cennik - Słoneczny Dotyk</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='30' fill='%23D6B78A'/><circle cx='50' cy='50' r='20' fill='%23F5EDE3'/></svg>">
+
+    <!-- Critical Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Optimized Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --beige-soft: #F5EDE3;
+            --beige-warm: #EFE4D5;
+            --beige-light: #FAF6F0;
+            --pink-soft: #F3D6D1;
+            --pink-powder: #F8E4E0;
+            --gold-light: #F5D9B0;
+            --gold-accent: #D4A574;
+            --gold-warm: #C9945C;
+            --white-pure: #FFFFFF;
+            --white-warm: #FDFAF4;
+            --brown-deep: #5C4033;
+            --brown-medium: #8B6F47;
+            --space-xl: 4rem;
+            --space-2xl: 5rem;
+            --font-serif: 'Cormorant', serif;
+            --font-sans: 'Manrope', sans-serif;
+        }
+
+        * {
+            font-family: var(--font-sans);
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--white-pure);
+            color: var(--brown-deep);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Pricing Page -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Cennik Usług</h2>
+                <p>Przejrzyste ceny bez ukrytych kosztów</p>
+            </div>
+
+            <!-- Pricing Packages -->
+            <div class="scroll-reveal" data-animation="fade-up" style="margin-bottom: 3rem;">
+                <h3 style="text-align: center; color: var(--brown-deep); margin-bottom: 2rem; font-size: 1.8rem;">
+                    Pakiety Czasowe</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); text-align: center; border: 2px solid var(--beige-soft);">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.5rem;">10 minut</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">25
+                            zł</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">Idealne na start</p>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, var(--gold-light), var(--beige-warm)); padding: 2rem; border-radius: 20px; box-shadow: 0 12px 32px rgba(212,165,116,0.25); text-align: center; border: 3px solid var(--gold-accent); position: relative; transform: scale(1.05);">
+                        <div
+                            style="position: absolute; top: -12px; right: 20px; background: var(--gold-accent); color: var(--white-pure); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            POLECANE</div>
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.5rem;">15 minut</h4>
+                        <div style="color: var(--gold-warm); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">37,5
+                            zł</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">Najpopularniejszy wybór</p>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); text-align: center; border: 2px solid var(--beige-soft);">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.5rem;">20 minut</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">50
+                            zł</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">Głęboka opalenizna</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="scroll-reveal" data-animation="fade-up"
+                style="background: var(--white-pure); padding: 2rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2rem;">
+                <h3 style="text-align: center; color: var(--brown-deep); margin-bottom: 1.5rem;">Ceny za Minutę Opalania
+                </h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--beige-soft);">
+                            <th style="text-align: left; padding: 1rem; color: var(--brown-deep);">Urządzenie</th>
+                            <th style="text-align: center; padding: 1rem; color: var(--brown-deep);">Typ</th>
+                            <th style="text-align: right; padding: 1rem; color: var(--brown-deep);">Cena za min</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1rem; color: var(--brown-medium); font-weight: 600;">Ergoline Evolution
+                                600</td>
+                            <td style="text-align: center; padding: 1rem; color: var(--brown-medium);">Leżące</td>
+                            <td style="text-align: right; padding: 1rem; font-weight: 600; color: var(--gold-accent);">
+                                2.50 zł</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1rem; color: var(--brown-medium); font-weight: 600;">Ergoline Prestige
+                                1100</td>
+                            <td style="text-align: center; padding: 1rem; color: var(--brown-medium);">Leżące</td>
+                            <td style="text-align: right; padding: 1rem; font-weight: 600; color: var(--gold-accent);">
+                                2.50 zł</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--brown-medium); font-weight: 600;">Vertical Tower</td>
+                            <td style="text-align: center; padding: 1rem; color: var(--brown-medium);">Stojące</td>
+                            <td style="text-align: right; padding: 1rem; font-weight: 600; color: var(--gold-accent);">
+                                2.10 zł</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Discounts Section -->
+            <div class="scroll-reveal" data-animation="fade-up" style="margin-bottom: 3rem;">
+                <h3 style="text-align: center; color: var(--brown-deep); margin-bottom: 1.5rem; font-size: 1.8rem;">
+                    Aktualne Rabaty i Promocje</h3>
+                <p style="text-align: center; color: var(--brown-medium); margin-bottom: 2rem; font-size: 0.95rem;">
+                    Kliknij w kartę, aby poznać szczegóły promocji<br>
+                    <strong style="color: var(--gold-accent); display: inline-flex; align-items: center; gap: 0.3rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.2rem; height: 1.2rem;">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" x2="12" y1="9" y2="13" />
+                            <line x1="12" x2="12.01" y1="17" y2="17" />
+                        </svg>
+                        Promocje nie łączą się
+                    </strong>
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div onclick="openModal('modal-pierwsza-wizyta')"
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--beige-soft); cursor: pointer; transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform=''; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.3rem;">Pierwsza wizyta</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
+                            -10%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.95rem; margin: 0;">Rabat na pierwszą sesję w
+                            dowolnym solarium</p>
+                    </div>
+                    <div onclick="openModal('modal-happy-hours')"
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--beige-soft); cursor: pointer; transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform=''; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.3rem;">Happy Hours</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
+                            -5%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.95rem; margin: 0;">Zniżka w wybranych godzinach
+                            (zapytaj o szczegóły)</p>
+                    </div>
+                    <div onclick="openModal('modal-studencka')"
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--beige-soft); cursor: pointer; transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform=''; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.3rem;">Zniżka Studencka</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
+                            -10%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.95rem; margin: 0;">Dla studentów z ważną
+                            legitymacją</p>
+                    </div>
+                    <div onclick="openModal('modal-vertical-tower')"
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--pink-soft); cursor: pointer; transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform=''; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.3rem;">Vertical Tower</h4>
+                        <div style="color: var(--gold-accent); font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
+                            -5%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.95rem; margin: 0;">Promocja na stojące solarium<br><strong>Ważna do 31.12.2025 <span class="promo-countdown"></span></strong></p>
+                    </div>
+                    <div onclick="openModal('modal-pakiet-5-plus-1')"
+                        style="background: linear-gradient(135deg, var(--gold-light), var(--beige-warm)); padding: 2rem; border-radius: 20px; box-shadow: 0 12px 32px rgba(212,165,116,0.2); border: 3px solid var(--gold-accent); cursor: pointer; transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 40px rgba(212,165,116,0.3)'"
+                        onmouseout="this.style.transform=''; this.style.boxShadow='0 12px 32px rgba(212,165,116,0.2)'">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.3rem;">Pakiet 5+1</h4>
+                        <div style="color: var(--gold-warm); font-size: 2rem; font-weight: 700; margin: 1rem 0;">Gratis
+                        </div>
+                        <p style="color: var(--brown-medium); font-size: 0.95rem; margin: 0;">Kup 5 sesji i otrzymaj 1
+                            sesję gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karnety -->
+            <div class="scroll-reveal" data-animation="fade-up" data-delay="100" style="margin-bottom: 2rem;">
+                <h3 style="text-align: center; color: var(--brown-deep); margin-bottom: 1.5rem; font-size: 1.6rem;">
+                    Karnety i Abonamenty</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--beige-soft);">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem;">Karnet 50 minut</h4>
+                        <div style="margin: 1rem 0;">
+                            <span
+                                style="color: var(--brown-medium); text-decoration: line-through; font-size: 1.2rem;">125
+                                zł</span>
+                            <span
+                                style="color: var(--gold-accent); font-size: 2rem; font-weight: 700; margin-left: 0.5rem;">119
+                                zł</span>
+                        </div>
+                        <div
+                            style="background: var(--pink-soft); color: var(--brown-deep); padding: 0.4rem 0.8rem; border-radius: 12px; display: inline-block; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+                            OSZCZĘDZASZ 5%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">2.38 zł/min zamiast 2.50
+                            zł/min</p>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, var(--gold-light), var(--beige-warm)); padding: 2rem; border-radius: 20px; box-shadow: 0 12px 32px rgba(212,165,116,0.2); border: 3px solid var(--gold-accent); position: relative;">
+                        <div
+                            style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold-accent); color: var(--white-pure); padding: 0.3rem 1.2rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            NAJLEPSZY DEAL</div>
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem;">Karnet 100 minut</h4>
+                        <div style="margin: 1rem 0;">
+                            <span
+                                style="color: var(--brown-medium); text-decoration: line-through; font-size: 1.2rem;">250
+                                zł</span>
+                            <span
+                                style="color: var(--gold-warm); font-size: 2rem; font-weight: 700; margin-left: 0.5rem;">220
+                                zł</span>
+                        </div>
+                        <div
+                            style="background: var(--gold-accent); color: var(--white-pure); padding: 0.4rem 0.8rem; border-radius: 12px; display: inline-block; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+                            OSZCZĘDZASZ 12%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">2.20 zł/min zamiast 2.50
+                            zł/min</p>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 2px solid var(--beige-soft);">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem;">Karnet 150 minut</h4>
+                        <div style="margin: 1rem 0;">
+                            <span
+                                style="color: var(--brown-medium); text-decoration: line-through; font-size: 1.2rem;">375
+                                zł</span>
+                            <span
+                                style="color: var(--gold-accent); font-size: 2rem; font-weight: 700; margin-left: 0.5rem;">319
+                                zł</span>
+                        </div>
+                        <div
+                            style="background: var(--pink-soft); color: var(--brown-deep); padding: 0.4rem 0.8rem; border-radius: 12px; display: inline-block; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+                            OSZCZĘDZASZ 15%</div>
+                        <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 0;">2.13 zł/min zamiast 2.50
+                            zł/min</p>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--brown-medium); margin-top: 1.5rem; font-size: 0.95rem;">
+                    Karnety ważne 6 miesięcy od daty zakupu</p>
+            </div>
+
+            <!-- Loyalty Card -->
+            <div class="scroll-reveal" data-animation="fade-up" data-delay="100"
+                style="background: linear-gradient(135deg, var(--gold-light), var(--pink-powder)); padding: 2rem; border-radius: 24px; margin-bottom: 2rem; border-left: 4px solid var(--gold-accent);">
+                <h3 style="color: var(--brown-deep); margin-top: 0;">Karta Lojalnościowa</h3>
+                <p style="color: var(--brown-medium); margin: 0.5rem 0;">Po 8 opalaniach na karcie otrzymujesz
+                    <strong>automatyczną zniżkę</strong> na następną sesję!
+                </p>
+                <p style="color: var(--brown-medium); margin: 0.5rem 0; font-size: 0.95rem;">Zbieraj pieczątki i ciesz
+                    się przywilejem lojalnego klienta.</p>
+            </div>
+
+            <!-- Cosmetics -->
+            <div class="scroll-reveal" data-animation="fade-up" data-delay="200"
+                style="background: var(--beige-soft); padding: 2rem; border-radius: 24px; margin-bottom: 2rem;">
+                <h3 style="color: var(--brown-deep); margin-top: 0; margin-bottom: 1.5rem;">Kosmetyki do Opalania</h3>
+                <div style="display: grid; gap: 1rem;">
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--gold-accent);">
+                        <div>
+                            <h4 style="color: var(--brown-deep); margin: 0 0 0.3rem; font-size: 1.1rem;">Bronzery i
+                                akceleratory</h4>
+                            <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;">Australian Gold,
+                                Devoted Creations, Emerald Bay</p>
+                        </div>
+                        <div
+                            style="color: var(--gold-accent); font-weight: 700; font-size: 1.3rem; white-space: nowrap; margin-left: 1rem;">
+                            25-65 zł</div>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--gold-accent);">
+                        <div>
+                            <h4 style="color: var(--brown-deep); margin: 0 0 0.3rem; font-size: 1.1rem;">Kremy
+                                pielęgnacyjne</h4>
+                            <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;">Intensywne nawilżanie i
+                                przedłużanie opalenizny</p>
+                        </div>
+                        <div
+                            style="color: var(--gold-accent); font-weight: 700; font-size: 1.3rem; white-space: nowrap; margin-left: 1rem;">
+                            30-55 zł</div>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--gold-accent);">
+                        <div>
+                            <h4 style="color: var(--brown-deep); margin: 0 0 0.3rem; font-size: 1.1rem;">Balsamy po
+                                opalaniu</h4>
+                            <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;">Chłodzące i
+                                regenerujące dla skóry</p>
+                        </div>
+                        <div
+                            style="color: var(--gold-accent); font-weight: 700; font-size: 1.3rem; white-space: nowrap; margin-left: 1rem;">
+                            20-40 zł</div>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--gold-accent);">
+                        <div>
+                            <h4 style="color: var(--brown-deep); margin: 0 0 0.3rem; font-size: 1.1rem;">Produkty z
+                                filtrem UV</h4>
+                            <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;">SPF 15-30 dla
+                                bezpiecznego opalania</p>
+                        </div>
+                        <div
+                            style="color: var(--gold-accent); font-weight: 700; font-size: 1.3rem; white-space: nowrap; margin-left: 1rem;">
+                            35-70 zł</div>
+                    </div>
+                </div>
+                <div
+                    style="background: var(--gold-light); padding: 1rem; border-radius: 12px; margin-top: 1.5rem; text-align: center;">
+                    <p style="color: var(--brown-deep); font-size: 0.95rem; margin: 0;"><strong>Nasze TOP 3
+                            bestsellery:</strong> Australian Gold Dark Tanning Accelerator (45 zł), Devoted Creations
+                        Black (55 zł), Emerald Bay Absolutely Shore (35 zł)</p>
+                </div>
+                <p style="color: var(--brown-medium); font-size: 0.9rem; margin: 1rem 0 0; text-align: center;">
+                    <strong>Skonsultuj się z naszym zespołem</strong> dotyczące produktów idealnych dla Twojej skóry.
+                </p>
+            </div>
+
+            <!-- FAQ Płatności -->
+            <div class="scroll-reveal" data-animation="fade-up" data-delay="400"
+                style="background: var(--white-pure); padding: 2rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 2rem;">
+                <h3 style="color: var(--brown-deep); margin-top: 0; margin-bottom: 1.5rem; text-align: center;">
+                    Płatności i Rezerwacje</h3>
+                <div style="display: grid; gap: 1.25rem;">
+                    <div style="border-left: 3px solid var(--gold-accent); padding-left: 1.5rem;">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.1rem;">Akceptujemy
+                            płatności:</h4>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.95rem;">Karty płatnicze (Visa,
+                            Mastercard) | Gotówka | BLIK</p>
+                    </div>
+                    <div style="border-left: 3px solid var(--gold-accent); padding-left: 1.5rem;">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.1rem;">Rezerwacje:</h4>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.95rem;">Rezerwacja telefoniczna
+                            lub osobiście w salonie.</p>
+                    </div>
+                    <div style="border-left: 3px solid var(--gold-accent); padding-left: 1.5rem;">
+                        <h4 style="color: var(--brown-deep); margin: 0 0 0.5rem; font-size: 1.1rem;">Vouchery
+                            prezentowe:</h4>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.95rem;">Dostępne w dowolnej
+                            kwocie. Idealny prezent na każdą okazję. Ważność 12 miesięcy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Porównanie urządzeń -->
+            <div class="scroll-reveal" data-animation="fade-up" data-delay="500"
+                style="background: var(--beige-soft); padding: 2rem; border-radius: 24px; margin-bottom: 2rem;">
+                <h3 style="color: var(--brown-deep); margin-top: 0; margin-bottom: 1.5rem; text-align: center;">
+                    Porównanie Urządzeń</h3>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h4 style="color: var(--brown-deep); margin: 0; font-size: 1.2rem;">Ergoline Evolution 600
+                            </h4>
+                            <div style="color: var(--gold-accent); font-size: 1.3rem;">⭐⭐⭐⭐</div>
+                        </div>
+                        <p style="color: var(--brown-medium); margin: 0 0 0.5rem; font-size: 0.9rem;">
+                            <strong>Typ:</strong> Leżące | <strong>Zalecany czas:</strong> 10-15 minut
+                        </p>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;"><strong>Dla kogo:</strong>
+                            Początkujący i średnio zaawansowani. Delikatna opalenizna.</p>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 2px solid var(--gold-accent);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h4 style="color: var(--brown-deep); margin: 0; font-size: 1.2rem;">Ergoline Prestige 1100
+                            </h4>
+                            <div style="color: var(--gold-accent); font-size: 1.3rem;">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p style="color: var(--brown-medium); margin: 0 0 0.5rem; font-size: 0.9rem;">
+                            <strong>Typ:</strong> Leżące Premium | <strong>Zalecany czas:</strong> 12-20 minut
+                        </p>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;"><strong>Dla kogo:</strong>
+                            Zaawansowani. Najlepsza intensywność i komfort.</p>
+                    </div>
+                    <div
+                        style="background: var(--white-pure); padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h4 style="color: var(--brown-deep); margin: 0; font-size: 1.2rem;">Vertical Tower</h4>
+                            <div style="color: var(--gold-accent); font-size: 1.3rem;">⭐⭐⭐⭐</div>
+                        </div>
+                        <p style="color: var(--brown-medium); margin: 0 0 0.5rem; font-size: 0.9rem;">
+                            <strong>Typ:</strong> Stojące | <strong>Zalecany czas:</strong> 8-12 minut
+                        </p>
+                        <p style="color: var(--brown-medium); margin: 0; font-size: 0.9rem;"><strong>Dla kogo:</strong>
+                            Wszyscy. Szybka sesja, równomierna opalenizna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Modals -->
+    <div class="modal-overlay" id="modal-pierwsza-wizyta">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Pierwsza wizyta -10%</h2>
+                <button class="modal-close" onclick="closeModal('modal-pierwsza-wizyta')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3 style="color: var(--brown-deep); margin-top: 0;">Witamy w naszym studio!</h3>
+                <p style="color: var(--brown-medium); line-height: 1.8; font-size: 1.05rem;">
+                    Z okazji pierwszej wizyty otrzymujesz <strong>10% zniżki</strong> na dowolną sesję opalania.
+                </p>
+                <ul style="color: var(--brown-medium); line-height: 2; margin-top: 1.5rem;">
+                    <li>Zniżka obowiązuje przy pierwszej wizycie</li>
+                    <li>Dostępna na wszystkich urządzeniach: Evolution 600, Prestige 1100 i Vertical Tower</li>
+                    <li>Nie łączy się z innymi promocjami</li>
+                </ul>
+                <p style="color: var(--gold-accent); font-weight: 600; margin-top: 1.5rem; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
+                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                        <path d="M9 18h6" />
+                        <path d="M10 22h4" />
+                    </svg>
+                    Idealna okazja, aby przetestować nasz sprzęt premium w obniżonej cenie!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('modal-pierwsza-wizyta')">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-happy-hours">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Happy Hours -5%</h2>
+                <button class="modal-close" onclick="closeModal('modal-happy-hours')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--brown-medium); line-height: 1.8; font-size: 1.05rem; margin-top: 0;">
+                    Raz w miesiącu przygotowujemy dla Was Happy Hours <strong>-5%</strong>, czyli krótką zniżkę na sesje w wybranych godzinach!
+                </p>
+                <ul style="color: var(--brown-medium); line-height: 2; margin-top: 1.5rem;">
+                    <li>Obowiązuje jednego dnia w miesiącu (wt-pt)</li>
+                    <li>Konkretne godziny publikujemy 1. dnia każdego miesiąca</li>
+                    <li>Działa na wszystkie urządzenia</li>
+                    <li>Nie łączy się z innymi promocjami</li>
+                </ul>
+                <p style="color: var(--gold-accent); font-weight: 600; margin-top: 1.5rem; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
+                    Sprawdzaj co miesiąc - Happy Hours potrafią wejść w idealnym momencie!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('modal-happy-hours')">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-studencka">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Zniżka studencka -10%</h2>
+                <button class="modal-close" onclick="closeModal('modal-studencka')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--brown-medium); line-height: 1.8; font-size: 1.05rem; margin-top: 0;">
+                    Studenci otrzymują stałą zniżkę <strong>10%</strong> na wszystkie sesje opalania przez cały rok akademicki.
+                </p>
+                <ul style="color: var(--brown-medium); line-height: 2; margin-top: 1.5rem;">
+                    <li>Wymagana ważna legitymacja studencka</li>
+                    <li>Obowiązuje na wszystkich urządzeniach</li>
+                    <li>Nie łączy się z innymi promocjami</li>
+                </ul>
+                <p style="color: var(--gold-accent); font-weight: 600; margin-top: 1.5rem; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
+                        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                        <path d="M22 10v6" />
+                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                    </svg>
+                    Idealna oferta dla studentów, którzy chcą dbać o wygląd bez nadwyrężania budżetu!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('modal-studencka')">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-vertical-tower">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Vertical Tower -5% (czasowa)</h2>
+                <button class="modal-close" onclick="closeModal('modal-vertical-tower')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--brown-medium); line-height: 1.8; font-size: 1.05rem; margin-top: 0;">
+                    Specjalna, krótkoterminowa oferta <strong>-5%</strong> na nasze stojące solarium Vertical Tower.
+                </p>
+                <ul style="color: var(--brown-medium); line-height: 2; margin-top: 1.5rem;">
+                    <li>Rabat dotyczy wyłącznie Vertical Tower</li>
+                    <li>Cena po rabacie: <strong>2.38 zł/min</strong></li>
+                    <li>Oferta nie łączy się z innymi promocjami</li>
+                    <li>Dostępna dla wszystkich klientów</li>
+                    <li><strong style="color: var(--gold-accent);">Ważna do 31.12.2025 <span class="promo-countdown"></span></strong></li>
+                </ul>
+                <p style="color: var(--gold-accent); font-weight: 600; margin-top: 1.5rem; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Oferta czasowa - idealna okazja, by wypróbować solarium stojące!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('modal-vertical-tower')">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-pakiet-5-plus-1">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Pakiet 5+1 Gratis</h2>
+                <button class="modal-close" onclick="closeModal('modal-pakiet-5-plus-1')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--brown-medium); line-height: 1.8; font-size: 1.05rem; margin-top: 0;">
+                    Kup 5 sesji i otrzymaj <strong>6. sesję całkowicie gratis</strong>!
+                </p>
+                <ul style="color: var(--brown-medium); line-height: 2; margin-top: 1.5rem;">
+                    <li>Płacisz tylko za 5 sesji</li>
+                    <li>6. sesja w tym samym urządzeniu jest bezpłatna</li>
+                    <li>Ważny przez 6 miesięcy</li>
+                    <li>Dotyczy wszystkich urządzeń</li>
+                </ul>
+                <p style="color: var(--gold-accent); font-weight: 600; margin-top: 1.5rem; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        <path d="M9 12h6" />
+                    </svg>
+                    Najlepszy wybór dla osób, które opalają się regularnie!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('modal-pakiet-5-plus-1')">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/main.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/icons.css">
+    </noscript>
+</body>
+
+</html>

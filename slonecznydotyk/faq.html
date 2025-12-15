@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FAQ - Słoneczny Dotyk. Odpowiedzi na najczęściej zadawane pytania dotyczące solarium, bezpieczeństwa i efektów opalania.">
+    <meta name="keywords" content="FAQ, pytania, solarium, opalanie, bezpieczeństwo">
+    <title>FAQ - Słoneczny Dotyk</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='30' fill='%23D6B78A'/><circle cx='50' cy='50' r='20' fill='%23F5EDE3'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --beige-soft: #F5EDE3;
+            --beige-warm: #EFE4D5;
+            --beige-light: #FAF6F0;
+            --pink-soft: #F3D6D1;
+            --pink-powder: #F8E4E0;
+            --gold-light: #F5D9B0;
+            --gold-accent: #D4A574;
+            --gold-warm: #C9945C;
+            --white-pure: #FFFFFF;
+            --white-warm: #FDFAF4;
+            --brown-deep: #5C4033;
+            --brown-medium: #8B6F47;
+            --space-xl: 4rem;
+            --space-2xl: 5rem;
+            --font-serif: 'Cormorant', serif;
+            --font-sans: 'Manrope', sans-serif;
+        }
+
+        * {
+            font-family: var(--font-sans);
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--white-pure);
+            color: var(--brown-deep);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+
+    <style>
+        .faq-section {
+            padding: var(--space-2xl) 0;
+            background: var(--white-pure);
+        }
+
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+
+        .faq-category h3 {
+            color: var(--brown-deep);
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .faq-item {
+            background: var(--beige-soft);
+            border-left: 4px solid var(--gold-accent);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.34, 1.26, 0.64, 1);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 12px 32px rgba(212, 165, 116, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--brown-deep);
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 165, 116, 0.08);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--brown-medium);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .faq-answer ul {
+            color: var(--brown-medium);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Często Zadawane Pytania</h2>
+                <p>Znajdź odpowiedzi na najważniejsze pytania dotyczące naszych usług</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto; margin-top: 3rem;">
+                <!-- Ogólne -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up">
+                    <h3>Ogólne Informacje</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak długo trwa sesja opalania?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Czas sesji zależy od wybranego urządzenia i Twojego doświadczenia. Dla początkujących
+                                rekomendujemy 8-12 minut, dla zaawansowanych do 20 minut. Nasz zespół zawsze dostosuje
+                                czas do Twoich potrzeb i typu skóry.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak często mogę korzystać z solarium?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Rekomendujemy sesje 2-3 razy w tygodniu dla utrzymania efektu. Dla początkujących
+                                wystarczy 1-2 razy w tygodniu. Pamiętaj, aby przyznać skórze odpoczynek między sesjami.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Kiedy zobaczę pierwsze efekty?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Pierwszą zmianę koloru skóry zauważysz już po pierwszej sesji. Jednak rzeczywisty,
+                                głęboki opalenizna widoczna jest po kilku sesjach (zwykle 3-5). Efekt maksymalny
+                                osiągasz po 10-15 wizytach.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jakie urządzenia oferujecie?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oferujemy certyfikowane urządzenia Ergoline Evolution 600, Ergoline Prestige 1100 i
+                                Vertical Tower, które są regularnie serwisowane. Komfortowe opalanie zależy od
+                                odpowiedniego czasu ekspozycji dostosowanego do Twojego typu skóry. Zawsze konsultuj
+                                czas sesji z naszym zespołem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Przygotowanie -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up" data-delay="100">
+                    <h3>Przygotowanie do Sesji</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak się przygotować do opalania w solarium?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Przed wizytą:</p>
+                            <ul>
+                                <li>Weź kąpiel lub prysznic (opłukaj, ale nie myj się chemicznie)</li>
+                                <li>Nie nakładaj kosmetyków ani dezodorantu</li>
+                                <li>Zdejmij makijaż</li>
+                                <li>Przytnij lub usuń zarost (jeśli to mężczyzna)</li>
+                                <li>Przydziel sobie około 30 minut przed sesją</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy mogę się golić przed opalaniem?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nie rekomendujemy golenia się bezpośrednio przed sesją. Najlepiej golić się 12-24 godziny
+                                wcześniej. Świeża skóra po goleniu może być wrażliwa na UV.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Co powinienem zabrać na sesję?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Niezbędne przedmioty:</p>
+                            <ul>
+                                <li>Ręcznik (możemy go udostępnić)</li>
+                                <li>Okulary ochronne (dostępne w salonie)</li>
+                                <li>Strój kąpielowy lub biustonosz (zalecany)</li>
+                                <li>Klipsy do włosów (jeśli masz długie włosy)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pielęgnacja -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up" data-delay="200">
+                    <h3>Pielęgnacja Skóry</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak pielęgnować skórę po opalaniu?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Po sesji:</p>
+                            <ul>
+                                <li>Czekaj min. 2 godziny przed prysznicem</li>
+                                <li>Nie używaj gorącej wody</li>
+                                <li>Nawilż skórę balsama lub olejem</li>
+                                <li>Pij dużo wody (nawodnienie z wnętrza)</li>
+                                <li>Unikaj intensywnego słońca przez 24h</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy mogę używać kosmetyków samoopalających?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tak, możesz łączyć solarium z kosmetykami samoopalającymi, ale nie w ten sam dzień.
+                                Rekomendujemy stosować je wieczorem, po sesji solarium, dla lepszych efektów.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak długo utrzymuje się efekt opalania?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Efekt trwa zwykle 7-14 dni, w zależności od typu skóry i pielęgnacji. Aby utrzymać
+                                opaleniznę, rekomendujemy regularne sesje co 2-3 tygodnie.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Urządzenia -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up" data-delay="300">
+                    <h3>Nasze Urządzenia</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jaka jest różnica między Ergoline Evolution 600 a Prestige 1100?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Ergoline Evolution 600:</strong> Nowszy model z zaawansowanym systemem opalania,
+                                idealny dla wymagających klientów szukających najlepszych efektów.<br><strong>Ergoline
+                                    Prestige 1100:</strong> Premium leżące solarium z zaawansowanymi funkcjami opieki
+                                nad skórą i systemem Beauty Light, maksymalny komfort.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Kiedy powinienem wybrać Vertical Tower?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vertical Tower (solarium stojące) to idealna opcja dla tych, którzy:</p>
+                            <ul>
+                                <li>Lubią opalać się w pozycji stojącej</li>
+                                <li>Chcą szybkiej i efektywnej sesji</li>
+                                <li>Szukają bardziej dostępnej cenowo opcji</li>
+                                <li>Mają ograniczone możliwości fizyczne do leżenia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy są różnice w efektach między urządzeniami?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Wszystkie nasze urządzenia zapewniają wysokiej jakości opaleniznę. Główne różnice to czas
+                                sesji i komfort:
+                                - Leżące solaria (Ergoline) dają bardziej równomierny efekt w dłuższe sesje
+                                - Vertical Tower zapewnia szybkie efekty w krótsze sesje
+                                - Wybór zależy od twoich preferencji i czasu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rezerwacja -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up" data-delay="400">
+                    <h3>Rezerwacja i Płatności</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jak zarezerwować wizytę?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Możesz zarezerwować wizytę na kilka sposobów:</p>
+                            <ul>
+                                <li>Poprzez formularz kontaktowy na stronie</li>
+                                <li>Telefonując: +48 693 599 002</li>
+                                <li>Wysyłając email: kontakt@slonecznydotyk.pl</li>
+                                <li>Osobiście w naszym salonie</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy mogę anulować rezerwację?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tak, rezerwacje można anulować do 24 godzin przed zaplanowaną sesją bez dodatkowych
+                                opłat. Anulowanie w krótszym terminie może wiązać się z opłatą.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Jakie metody płatności przyjmujecie?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Akceptujemy:</p>
+                            <ul>
+                                <li>Gotówka</li>
+                                <li>Karty kredytowe i debetowe</li>
+                                <li>Transfery bankowe</li>
+                                <li>Płatności mobilne (Apple Pay, Google Pay)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy macie karty lojalnościowe?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tak! Po 8 opalaniach na karcie otrzymujesz automatyczną zniżkę na następną sesję. Zbieraj
+                                pieczątki i ciesz się przywilejem lojalnego klienta. Karty można kupić w salonie.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specjalne Sytuacje -->
+                <div class="faq-category scroll-reveal" data-animation="fade-up" data-delay="500">
+                    <h3>Specjalne Sytuacje</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy mogę korzystać z solarium na lekarstwa?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Niektóre leki mogą powodować fotosensytywność. Przed sesją sprawdź ulotki swoich leków.
+                                Jeśli masz wątpliwości, skonsultuj się z lekarzem lub naszym zespołem.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy mogę opalać się w solarium będąc w ciąży?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Rekomendujemy konsultację z lekarzem prowadzącym ciążę. Ogólnie, większość lekarzy nie
+                                zaleca intensywnego opalania w solarium podczas ciąży.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Co jeśli mam tatuaż?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nowy tatuaż (mniej niż 2 tygodnie) powinien być osłonięty podczas opalania. Możemy
+                                zasugerować osłonięcie go plastrami lub zmianę czasu opalania. Stary tatuaż nie wymaga
+                                specjalnego osłonięcia.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Czy osoby z wrażliwą skórą mogą korzystać z solarium?</span>
+                            <span class="faq-toggle">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tak, jednak powinni zacząć od krótszych sesji (6-8 minut) i mniej częstych wizyt. Nasz
+                                zespół może zasugerować optymalny czas ekspozycji. Zawsze stosuj balsam hydratyzujący po
+                                sesji.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            question.addEventListener('click', () => {
+                const isCurrentlyOpen = item.classList.contains('active');
+
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+
+                if (!isCurrentlyOpen) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+    <script defer src="js/components.js"></script>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/main.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/icons.css">
+    </noscript>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi - Słoneczny Dotyk</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='30' fill='%23D6B78A'/><circle cx='50' cy='50' r='20' fill='%23F5EDE3'/></svg>">
+
+    <!-- Critical Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Optimized Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --beige-soft: #F5EDE3;
+            --beige-warm: #EFE4D5;
+            --beige-light: #FAF6F0;
+            --pink-soft: #F3D6D1;
+            --pink-powder: #F8E4E0;
+            --gold-light: #F5D9B0;
+            --gold-accent: #D4A574;
+            --gold-warm: #C9945C;
+            --white-pure: #FFFFFF;
+            --white-warm: #FDFAF4;
+            --brown-deep: #5C4033;
+            --brown-medium: #8B6F47;
+            --space-xl: 4rem;
+            --space-2xl: 5rem;
+            --font-serif: 'Cormorant', serif;
+            --font-sans: 'Manrope', sans-serif;
+        }
+
+        * {
+            font-family: var(--font-sans);
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--white-pure);
+            color: var(--brown-deep);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Services Page -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Nasze Urządzenia</h2>
+                <p>Najnowocześniejszy sprzęt dla Twojego komfortu</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"
+                            aria-label="Gwiazda - Ergoline Evolution 600">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <h3>Ergoline Evolution 600</h3>
+                    <p>Najnowszy model leżący z zaawansowanym systemem opalania, vibro masażem i aromaterapią. Idealne
+                        dla wymagających klientów szukających najlepszych efektów.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">2.50 zł / minuta</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            aria-label="Diament - Ergoline Prestige 1100" stroke-width="2">
+                            <path
+                                d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" />
+                            <path d="M8 12h8" />
+                            <path d="m12 2 4 10-4 10-4-10Z" />
+                        </svg></div>
+                    <h3>Ergoline Prestige 1100</h3>
+                    <p>Premium leżące solarium z zaawansowanymi funkcjami opieki nad skórą i systemem Beauty Light.
+                        Maksymalny komfort i efektywność opalania.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">2.50 zł / minuta</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            aria-label="Słońce - Vertical Tower" stroke-width="2">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg></div>
+                    <h3>Vertical Tower</h3>
+                    <p>Nowoczesne stojące solarium. Idealne dla tych, którzy wolą opalać się w pozycji stojącej. Szybkie
+                        i efektywne rezultaty.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">2.10 zł / minuta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Porównaj Nasze Urządzenia</h2>
+                <p>Znajdź idealne solarium dla siebie</p>
+            </div>
+            <div class="comparison-table-wrapper scroll-reveal" data-animation="fade-up" data-delay="100" style="width: 100%; overflow-x: auto; border-radius: 16px; background: var(--white-pure); box-shadow: 0 8px 24px rgba(0,0,0,0.08); color-scheme: light;">
+                <table class="comparison-table" style="width: 100%; border-collapse: collapse; background: transparent;">
+
+                    <thead>
+                        <tr style="background: var(--gold-light);">
+                            <th style="padding: 1.5rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 700; font-size: 1.1rem;">Parametr</th>
+                            <th style="padding: 1.5rem 2rem; text-align: center; color: var(--brown-deep); font-weight: 700; font-size: 1.1rem;">Ergoline Evolution 600</th>
+                            <th style="padding: 1.5rem 2rem; text-align: center; color: var(--brown-deep); font-weight: 700; font-size: 1.1rem;">Ergoline Prestige 1100</th>
+                            <th style="padding: 1.5rem 2rem; text-align: center; color: var(--brown-deep); font-weight: 700; font-size: 1.1rem;">Vertical Tower</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Typ</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Leżące</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Leżące Premium</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Stojące</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft); background: var(--beige-light);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Moc lamp</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">180W</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">200W</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">180W</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Czas sesji</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">10-15 min</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">8-12 min</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">10-15 min</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft); background: var(--beige-light);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Promienie UV</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">UVA + UVB</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">UVA + UVB + Beauty Light</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">UVA + UVB</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Vibro masaż</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓ Premium</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">-</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft); background: var(--beige-light);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Aromaterapia</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">-</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>System audio</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓ Premium</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft); background: var(--beige-light);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Klimatyzacja</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓ Zaawansowana</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--beige-soft);">
+                            <td style="padding: 1.2rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 600;"><strong>Dla kogo?</strong></td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Wszyscy, komfort standard</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Wymagający, maksymalny komfort</td>
+                            <td style="padding: 1.2rem 2rem; text-align: center; color: var(--brown-deep);">Szybkie sesje, aktywni</td>
+                        </tr>
+                        <tr style="background: var(--gold-light);">
+                            <td style="padding: 1.5rem 2rem; text-align: left; color: var(--brown-deep); font-weight: 700;"><strong>Cena</strong></td>
+                            <td style="padding: 1.5rem 2rem; text-align: center;"><span style="color: var(--brown-deep); font-size: 1.2rem; font-weight: 700;">2.50 zł/min</span></td>
+                            <td style="padding: 1.5rem 2rem; text-align: center;"><span style="color: var(--brown-deep); font-size: 1.2rem; font-weight: 700;">2.50 zł/min</span></td>
+                            <td style="padding: 1.5rem 2rem; text-align: center;"><span style="color: var(--brown-deep); font-size: 1.2rem; font-weight: 700;">2.10 zł/min</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Jak Przebiega Sesja?</h2>
+                <p>Prosty proces w 5 krokach</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card scroll-reveal" data-animation="scale" data-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3>Rezerwacja</h3>
+                    <p>Zarezerwuj termin online, telefonicznie lub osobiście</p>
+                </div>
+                <div class="step-card scroll-reveal" data-animation="scale" data-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Konsultacja</h3>
+                    <p>Krótka rozmowa o typie skóry i doborze urządzenia</p>
+                </div>
+                <div class="step-card scroll-reveal" data-animation="scale" data-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Przygotowanie</h3>
+                    <p>Zdejmij biżuterię, możesz użyć naszych kosmetyków</p>
+                </div>
+                <div class="step-card scroll-reveal" data-animation="scale" data-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg>
+                    </div>
+                    <h3>Sesja</h3>
+                    <p>Relaksuj się przez 10-15 minut w komfortowym solarium</p>
+                </div>
+                <div class="step-card scroll-reveal" data-animation="scale" data-delay="500">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
+                        </svg>
+                    </div>
+                    <h3>Pielęgnacja</h3>
+                    <p>Nawilż skórę balsamem, pij dużo wody</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="additional-services">
+        <div class="container">
+            <div class="section-header scroll-reveal" data-animation="fade-up">
+                <h2>Dodatkowe Usługi</h2>
+                <p>Uzupełnij swoją wizytę</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card scroll-reveal" data-animation="fade-left" data-delay="100">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-label="Kosmetyki Premium">
+                            <path d="M9 2v6" />
+                            <path d="M15 2v6" />
+                            <path d="M12 17v5" />
+                            <path d="M5 8h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2z" />
+                        </svg></div>
+                    <h3>Kosmetyki Premium</h3>
+                    <p>Profesjonalne balsamy, olejki i akceleratory opalania. Zwiększ efektywność sesji i zadbaj o swoją
+                        skórę.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">15-45 zł</p>
+                </div>
+                <div class="service-card scroll-reveal" data-animation="fade-up" data-delay="200">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-label="Porady Eksperckie">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg></div>
+                    <h3>Porady Eksperckie</h3>
+                    <p>Bezpłatna konsultacja dotycząca doboru czasu sesji, częstotliwości wizyt oraz pielęgnacji skóry
+                        po opalaniu.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">Gratis</p>
+                </div>
+                <div class="service-card scroll-reveal" data-animation="fade-right" data-delay="300">
+                    <div class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-label="Pakiety Abonamentowe">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg></div>
+                    <h3>Pakiety Abonamentowe</h3>
+                    <p>Kup 5 sesji i zapłać za 4, pakiet 10 sesji z 20% rabatem. Idealne dla regularnych klientów.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--gold-accent);">Zobacz cennik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/main.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/icons.css">
+    </noscript>
+</body>
+
+</html>
