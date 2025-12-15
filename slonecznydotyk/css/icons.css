@@ -1,0 +1,25 @@
+.icon {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    display: inline-block;
+    color: var(--gold-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.feature-card-icon .icon {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    color: var(--gold-accent);
+}
+
+.service-icon .icon {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    color: var(--gold-accent);
+}
+
+.footer-social .icon {
+    width: 2.025rem;
+    height: 2.025rem;
+}
