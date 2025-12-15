@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | STX Works</title>
+    <meta name="description" content="Skontaktuj się z STX Works - porozmawiajmy o Twoim projekcie webowym.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stxworks.pl/kontakt.html">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stxworks.pl/kontakt.html">
+    <meta property="og:title" content="Kontakt | STX Works">
+    <meta property="og:description" content="Skontaktuj się z STX Works - porozmawiajmy o Twoim projekcie webowym.">
+    <meta property="og:image" content="https://stxworks.pl/og-image.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="STX Works">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakt | STX Works">
+    <meta name="twitter:description" content="Skontaktuj się z STX Works - porozmawiajmy o Twoim projekcie webowym.">
+    <meta name="twitter:image" content="https://stxworks.pl/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("LnFdkzzQf0DtrkMY-");
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Mouse Trail -->
+    <canvas class="mouse-trail" id="mouse-trail"></canvas>
+
+    <!-- Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Contact Section -->
+    <section class="section contact-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;kontakt&gt;</span>
+                <h1 class="section-title reveal-fade">Porozmawiajmy!</h1>
+                <p class="section-subtitle reveal-fade">Masz pomysł na projekt? Pytania? Po prostu chcesz powiedzieć
+                    cześć? Napisz do mnie!</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <form class="contact-form reveal-fade" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Twoje imię" required
+                                aria-label="Twoje imię">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Twój email" required
+                                aria-label="Twój email">
+                            <span class="form-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <select id="subject" name="subject" required aria-label="Rodzaj usługi">
+                            <option value="" disabled selected>Czego potrzebujesz?</option>
+                            <optgroup label="Strony internetowe">
+                                <option value="pakiet-firma">Pakiet "Firma na Start"</option>
+                                <option value="wizytowka">Wizytówka Online</option>
+                                <option value="strona-firmowa">Strona firmowa</option>
+                                <option value="projekt-indywidualny">Projekt indywidualny</option>
+                            </optgroup>
+                            <optgroup label="Dodatki">
+                                <option value="copywriting">Copywriting</option>
+                                <option value="wizytowka-google">Wizytówka Google</option>
+                                <option value="logo">Logo</option>
+                            </optgroup>
+                            <optgroup label="Wsparcie">
+                                <option value="pakiet-spokoju">Pakiet Spokoju (opieka)</option>
+                                <option value="rebranding">Rebranding strony</option>
+                                <option value="poprawki">Drobne poprawki</option>
+                            </optgroup>
+                            <optgroup label="Inne">
+                                <option value="wycena">Wycena projektu</option>
+                                <option value="pytanie">Mam pytanie</option>
+                                <option value="inne">Coś innego</option>
+                            </optgroup>
+                        </select>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" rows="6" placeholder="Twoja wiadomość" required
+                            aria-label="Treść wiadomości"></textarea>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <input type="text" id="budget" name="budget" placeholder="Orientacyjny budżet (opcjonalnie)"
+                            aria-label="Orientacyjny budżet">
+                    </div>
+
+                    <!-- Mikro-RODO -->
+                    <p
+                        style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-md); line-height: 1.5;">
+                        Wysyłając formularz wyrażasz zgodę na kontakt w sprawie Twojego zapytania.
+                    </p>
+
+                    <!-- Honeypot anti-spam (invisible to users) -->
+                    <div class="form-group full-width"
+                        style="position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden;"
+                        aria-hidden="true">
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off"
+                            placeholder="Leave empty">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large magnetic"
+                        style="width: 100%; justify-content: center;">
+                        <span>Wyślij wiadomość</span>
+                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info-cards reveal-fade">
+                    <a href="mailto:kontakt@stxworks.pl" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Email</h4>
+                            <p>kontakt@stxworks.pl</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+48693459978" class="contact-card">
+                        <div class="contact-card-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Telefon</h4>
+                            <p>+48 693 459 978</p>
+                        </div>
+                    </a>
+
+                    <a href="https://discord.com/users/672512872659550240" target="_blank" rel="noopener"
+                        class="contact-card">
+                        <div class="contact-card-icon" style="background: linear-gradient(135deg, #5865F2, #4752C4);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Discord</h4>
+                            <p>@stasiu9194</p>
+                        </div>
+                    </a>
+
+                    <a href="https://useme.com/pl/roles/contractor/stx-works,580468/" target="_blank" rel="noopener"
+                        class="contact-card">
+                        <div class="contact-card-icon" style="background: linear-gradient(135deg, #00a86b, #00875a);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Useme</h4>
+                            <p>useme.com/stx-works</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-card" style="cursor: default;">
+                        <div class="contact-card-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Czas odpowiedzi</h4>
+                            <p>Zwykle do 24 godzin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

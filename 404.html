@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Strona nie znaleziona | STX Works</title>
+    <meta name="description" content="Strona, której szukasz, nie istnieje. Wróć na stronę główną STX Works.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 25vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(8rem, 25vw, 14rem);
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.1;
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            line-height: 1.7;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-decoration {
+            position: absolute;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-tertiary);
+            opacity: 0.3;
+        }
+
+        .error-decoration-1 {
+            top: 20%;
+            left: 10%;
+            animation: float-code 15s ease-in-out infinite;
+        }
+
+        .error-decoration-2 {
+            bottom: 25%;
+            right: 8%;
+            animation: float-code 18s ease-in-out infinite reverse;
+        }
+
+        .error-decoration-3 {
+            top: 60%;
+            left: 5%;
+            animation: float-code 20s ease-in-out infinite 3s;
+        }
+
+        @media (max-width: 768px) {
+            .error-decoration {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                </div>
+                <span class="loader-text">STX Works</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mouse Trail -->
+    <canvas class="mouse-trail" id="mouse-trail"></canvas>
+
+    <!-- Animated background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 404 Error Section -->
+    <section class="error-page">
+        <!-- Decorative code snippets -->
+        <div class="error-decoration error-decoration-1">// page not found</div>
+        <div class="error-decoration error-decoration-2">throw new Error(404);</div>
+        <div class="error-decoration error-decoration-3">&lt;/missing&gt;</div>
+
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Ups! Strona nie istnieje</h1>
+            <p class="error-description">
+                Strona, której szukasz, mogła zostać przeniesiona, usunięta lub nigdy nie istniała.
+                Sprawdź adres URL lub wróć na stronę główną.
+            </p>
+            <div class="error-buttons">
+                <a href="index.html" class="btn btn-primary magnetic">
+                    <span>Wróć na stronę główną</span>
+                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="kontakt.html" class="btn btn-secondary magnetic">
+                    <span>Skontaktuj się</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

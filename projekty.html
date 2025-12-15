@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty | STX Works</title>
+    <meta name="description"
+        content="Portfolio projektów STX Works - strony internetowe dla małych firm i lokalnych biznesów.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stxworks.pl/projekty.html">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stxworks.pl/projekty.html">
+    <meta property="og:title" content="Portfolio realizacji | STX Works">
+    <meta property="og:description"
+        content="Portfolio projektów STX Works - strony internetowe dla małych firm i lokalnych biznesów.">
+    <meta property="og:image" content="https://stxworks.pl/og-image.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="STX Works">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio realizacji | STX Works">
+    <meta name="twitter:description"
+        content="Portfolio projektów STX Works - strony internetowe dla małych firm i lokalnych biznesów.">
+    <meta name="twitter:image" content="https://stxworks.pl/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <!-- Mouse Trail -->
+    <canvas class="mouse-trail" id="mouse-trail"></canvas>
+
+    <!-- Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="section projects-hero" style="padding-top: 160px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;projekty&gt;</span>
+                <h1 class="section-title reveal-fade">Moje realizacje</h1>
+                <p class="section-subtitle reveal-fade">Każdy projekt to inna branża i inne potrzeby. Poniżej znajdziesz
+                    przykłady mojej pracy.</p>
+            </div>
+
+            <div class="featured-projects">
+                <!-- Słoneczny Dotyk -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5"
+                        data-gallery="slonecznydotyk">
+                        <img src="assets/sloneczny-dotyk-preview.png" alt="Słoneczny Dotyk - strona solarium">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>Słoneczny Dotyk</h3>
+                        <p class="featured-project-desc">
+                            Elegancka strona firmowa dla studia solarium premium. Ciepła kolorystyka w odcieniach złota
+                            i beżu, responsywny design i płynne animacje tworzą luksusowe wrażenie. Strona zawiera
+                            sekcje: o nas, usługi, cennik, galerię wnętrza lokalu, FAQ oraz formularz kontaktowy. Strona
+                            na obecny stan nie została jeszcze wdrożona.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Lightbox</span>
+                            </div>
+                            <a href="https://stxworks.pl/sloneczny-dotyk" class="btn btn-secondary btn-small magnetic"
+                                target="_blank" rel="noopener">
+                                <span>Zobacz stronę</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Skład Opału -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5" data-gallery="skladopalu">
+                        <img src="assets/skladopalu-preview.png" alt="Skład Opału - Węgiel u Jarka">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>Skład Opału „Węgiel u Jarka"</h3>
+                        <p class="featured-project-desc">
+                            Strona firmowa dla lokalnego składu opału. Prosty, przejrzysty design z prezentacją oferty
+                            produktów, cennikiem oraz danymi kontaktowymi. Strona powstała dla prawdziwego klienta
+                            i jest aktualnie wdrożona.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Supabase</span>
+                                <span>Panel CMS</span>
+                            </div>
+                            <a href="https://wegielujarka.pl" class="btn btn-secondary btn-small magnetic"
+                                target="_blank" rel="noopener">
+                                <span>Zobacz stronę</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- GreenSpace -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5" data-gallery="greenspace">
+                        <img src="assets/greenspace-preview.png" alt="GreenSpace - strona ogrodnicza">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>GreenSpace</h3>
+                        <p class="featured-project-desc">
+                            Profesjonalna strona dla firmy z branży ogrodnictwa, z dbałością o estetykę i użyteczność
+                            witryny. Projekt obejmuje szeroką galerię realizacji, przejrzysty cennik, stronę zespołu
+                            oraz intuicyjny formularz kontaktowy. Strona powstała w celu demonstracji umiejętności
+                            tworzenia stron internetowych.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Galeria</span>
+                                <span>FormSubmit</span>
+                            </div>
+                            <a href="https://stxworks.pl/greenspace" class="btn btn-secondary btn-small magnetic"
+                                target="_blank" rel="noopener">
+                                <span>Zobacz stronę</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LuxStay -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5" data-gallery="luxstay">
+                        <img src="assets/luxstay-preview.png" alt="LuxStay - strona hotelowa">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>LuxStay</h3>
+                        <p class="featured-project-desc">
+                            Elegancka strona do butikowego hotelu z systemem prezentacji pokoi i galerią zdjęć. Strona
+                            powstaje w celu demonstracji umiejętności tworzenia stron dla branży hotelowej i
+                            turystycznej. Projekt w budowie.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <span class="btn btn-secondary btn-small" style="opacity: 0.6; cursor: default;">
+                                <span>Strona w budowie</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content reveal-fade">
+                <h2 class="cta-title">Potrzebujesz podobnej strony?</h2>
+                <p class="cta-text">Napisz do mnie - porozmawiajmy o Twoim projekcie.</p>
+                <a href="kontakt.html" class="btn btn-primary btn-large magnetic">
+                    <span>Skontaktuj się</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Lightbox Gallery Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Zamknij">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Poprzednie">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+        </button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="Gallery image">
+        <button class="lightbox-nav lightbox-next" aria-label="Następne">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+            </svg>
+        </button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

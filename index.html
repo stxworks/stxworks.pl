@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX Works | Strony internetowe dla małych firm</title>
+    <meta name="description"
+        content="Tworzę proste, nowoczesne strony internetowe dla małych i lokalnych firm. Strona firmowa od 599 zł.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stxworks.pl/">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stxworks.pl/">
+    <meta property="og:title" content="STX Works | Strony internetowe dla małych firm">
+    <meta property="og:description"
+        content="Tworzę proste, nowoczesne strony internetowe dla małych i lokalnych firm. Strona firmowa od 599 zł.">
+    <meta property="og:image" content="https://stxworks.pl/og-image.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="STX Works">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STX Works | Strony internetowe dla małych firm">
+    <meta name="twitter:description"
+        content="Tworzę proste, nowoczesne strony internetowe dla małych i lokalnych firm. Strona firmowa od 599 zł.">
+    <meta name="twitter:image" content="https://stxworks.pl/og-image.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "STX Works",
+        "description": "Tworzę proste, nowoczesne strony internetowe dla małych i lokalnych firm.",
+        "url": "https://stxworks.pl",
+        "email": "kontakt@stxworks.pl",
+        "telephone": "+48693459978",
+        "areaServed": "PL",
+        "priceRange": "399-1599 PLN",
+        "serviceType": ["Web Development", "Website Design", "Landing Page"],
+        "sameAs": [
+            "https://useme.com/pl/roles/contractor/stx-works,580468/",
+            "https://discord.com/users/672512872659550240"
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                </div>
+                <span class="loader-text">STX Works</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mouse Trail -->
+    <canvas class="mouse-trail" id="mouse-trail"></canvas>
+
+    <!-- Animated background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Hero Background Effects -->
+        <div class="hero-bg-effects">
+            <!-- Animated Grid Lines -->
+            <div class="grid-lines">
+                <div class="grid-line grid-line-v"></div>
+                <div class="grid-line grid-line-v"></div>
+                <div class="grid-line grid-line-v"></div>
+                <div class="grid-line grid-line-h"></div>
+                <div class="grid-line grid-line-h"></div>
+            </div>
+
+            <!-- Floating Code Snippets -->
+            <div class="floating-code-snippets">
+                <div class="floating-snippet snippet-1">&lt;div class="success"&gt;</div>
+                <div class="floating-snippet snippet-2">const website = new Site();</div>
+                <div class="floating-snippet snippet-3">responsive: true</div>
+                <div class="floating-snippet snippet-4">// mobile first</div>
+                <div class="floating-snippet snippet-5">&lt;/&gt;</div>
+                <div class="floating-snippet snippet-6">await deploy();</div>
+            </div>
+
+            <!-- Glow Orbs -->
+            <div class="glow-orbs">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="glow-orb orb-3"></div>
+            </div>
+
+            <!-- Animated Particles -->
+            <div class="hero-particles" id="hero-particles"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+
+                <h1 class="hero-title">
+                    <span class="title-line reveal-fade" style="--delay: 0.1s">Tworzę strony internetowe</span>
+                    <span class="title-name reveal-fade" style="--delay: 0.2s">
+                        <span class="typing-text" id="typing-text">dla małych i lokalnych firm.</span>
+                        <span class="typing-cursor">|</span>
+                    </span>
+                </h1>
+
+                <p class="hero-description reveal-fade" style="--delay: 0.3s">
+                    Proste, nowoczesne strony, które <span class="text-gradient">dobrze wyglądają</span>
+                    i <span class="text-gradient">działają na telefonie</span>.
+                </p>
+
+                <div class="hero-buttons reveal-fade" style="--delay: 0.4s">
+                    <a href="projekty.html" class="btn btn-primary magnetic" data-strength="15">
+                        <span>Zobacz przykłady</span>
+                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="kontakt.html" class="btn btn-secondary magnetic" data-strength="15">
+                        <span>Napisz do mnie</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal-fade" style="--delay: 0.5s">
+                <div class="code-window tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">stx-works.js</span>
+                    </div>
+                    <pre class="code-content"><code id="random-code"></code></pre>
+                </div>
+                <div class="floating-badges">
+                    <div class="float-badge badge-1">📱 Mobilne</div>
+                    <div class="float-badge badge-2">🎨 Nowoczesne</div>
+                    <div class="float-badge badge-3">🚀 Szybkie</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>✦ Strony internetowe</span>
+                    <span>✦ Landing page</span>
+                    <span>✦ Wersja mobilna</span>
+                    <span>✦ Nowoczesny design</span>
+                    <span>✦ Szybka realizacja</span>
+                    <span>✦ Przystępne ceny</span>
+                    <span>✦ Dla małych firm</span>
+                    <span>✦ Bez ukrytych kosztów</span>
+                    <span>✦ Wsparcie po wdrożeniu</span>
+                    <span>✦ Responsywność</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>✦ Strony internetowe</span>
+                    <span>✦ Landing page</span>
+                    <span>✦ Wersja mobilna</span>
+                    <span>✦ Nowoczesny design</span>
+                    <span>✦ Szybka realizacja</span>
+                    <span>✦ Przystępne ceny</span>
+                    <span>✦ Dla małych firm</span>
+                    <span>✦ Bez ukrytych kosztów</span>
+                    <span>✦ Wsparcie po wdrożeniu</span>
+                    <span>✦ Responsywność</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>✦ Strony internetowe</span>
+                    <span>✦ Landing page</span>
+                    <span>✦ Wersja mobilna</span>
+                    <span>✦ Nowoczesny design</span>
+                    <span>✦ Szybka realizacja</span>
+                    <span>✦ Przystępne ceny</span>
+                    <span>✦ Dla małych firm</span>
+                    <span>✦ Bez ukrytych kosztów</span>
+                    <span>✦ Wsparcie po wdrożeniu</span>
+                    <span>✦ Responsywność</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>✦ Strony internetowe</span>
+                    <span>✦ Landing page</span>
+                    <span>✦ Wersja mobilna</span>
+                    <span>✦ Nowoczesny design</span>
+                    <span>✦ Szybka realizacja</span>
+                    <span>✦ Przystępne ceny</span>
+                    <span>✦ Dla małych firm</span>
+                    <span>✦ Bez ukrytych kosztów</span>
+                    <span>✦ Wsparcie po wdrożeniu</span>
+                    <span>✦ Responsywność</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Przewiń w dół</span>
+        </div>
+    </section>
+
+    <!-- Dla kogo Section -->
+    <section class="section target-audience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;dla kogo&gt;</span>
+                <h2 class="section-title reveal-fade">Czy to rozwiązanie dla Ciebie?</h2>
+            </div>
+
+            <div class="audience-grid reveal-fade">
+                <div class="audience-column audience-yes">
+                    <h3>Tak, jeśli:</h3>
+                    <ul>
+                        <li>prowadzisz małą lub lokalną firmę</li>
+                        <li>chcesz po prostu dobrą stronę internetową</li>
+                        <li>zależy Ci na szybkim terminie realizacji</li>
+                        <li>nie chcesz zajmować się technicznymi detalami</li>
+                    </ul>
+                </div>
+
+                <div class="audience-column audience-no">
+                    <h3>Nie, jeśli:</h3>
+                    <ul>
+                        <li>potrzebujesz wieloosobowego zespołu lub agencji</li>
+                        <li>szukasz aplikacji z zaawansowanymi integracjami</li>
+                        <li>budżet projektu to kilkadziesiąt tysięcy złotych</li>
+                    </ul>
+                </div>
+            </div>
+
+            <blockquote class="audience-quote reveal-fade">
+                Moja specjalność to proste strony firmowe. Większe zlecenia? Też jestem otwarty – wystarczy napisać.
+            </blockquote>
+        </div>
+    </section>
+
+
+    <!-- Prosta Oferta Section -->
+    <section class="section pricing-highlight" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;oferta&gt;</span>
+                <h2 class="section-title reveal-fade">Rozwiązania dla Twojej firmy</h2>
+            </div>
+
+            <div class="pricing-grid reveal-fade">
+                <!-- Wizytówka Online START -->
+                <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-badge" style="background: var(--accent-tertiary);">START</div>
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="2" width="16" height="20" rx="2" />
+                            <path d="M8 6h8M8 10h8M8 14h4" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Wizytówka Online</h3>
+                    <div class="pricing-price">399 zł</div>
+                    <p class="pricing-period">brutto</p>
+                    <p class="pricing-desc">Dla firm, które chcą szybko i prosto zaistnieć w internecie.</p>
+                    <ul class="pricing-features">
+                        <li>Nowoczesny wygląd</li>
+                        <li>Wersja mobilna</li>
+                        <li>Sekcje: oferta, o firmie, kontakt</li>
+                        <li>Realizacja 2–3 dni</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-secondary magnetic">
+                        <span>Zamów wizytówkę</span>
+                    </a>
+                </div>
+
+                <!-- Strona firmowa - NAJCZĘŚCIEJ WYBIERANE -->
+                <div class="pricing-card featured tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-badge">Rekomendowane</div>
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Strona firmowa</h3>
+                    <div class="pricing-price">599-999 zł</div>
+                    <p class="pricing-period">brutto</p>
+                    <p class="pricing-desc">Pełna strona dla małych i lokalnych firm.</p>
+                    <ul class="pricing-features">
+                        <li>Kilka podstron</li>
+                        <li>Indywidualny wygląd</li>
+                        <li>Wersja mobilna</li>
+                        <li>Realizacja w kilka dni</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-primary magnetic">
+                        <span>Zamów stronę firmową</span>
+                    </a>
+                </div>
+
+                <!-- Projekt indywidualny -->
+                <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Projekt indywidualny</h3>
+                    <div class="pricing-price">od 1 000 zł</div>
+                    <p class="pricing-period">brutto • wycena indywidualna</p>
+                    <p class="pricing-desc">Dla bardziej rozbudowanych lub niestandardowych projektów.</p>
+                    <ul class="pricing-features">
+                        <li>Większa liczba podstron</li>
+                        <li>Dodatkowe funkcje</li>
+                        <li>Pełne dopasowanie do potrzeb firmy</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-secondary magnetic">
+                        <span>Zapytaj o wycenę</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Informacje o cenach -->
+            <div class="pricing-info reveal-fade">
+                <div class="pricing-info-card">
+                    <h4><svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg> Hosting i domena</h4>
+                    <ul>
+                        <li><strong>Opcja 1:</strong> Zapewniasz hosting i domenę we własnym zakresie</li>
+                        <li><strong>Opcja 2:</strong> Korzystasz z oferty STX Works – <strong>149 zł/rok</strong>
+                            (hosting + domena + SSL)</li>
+                    </ul>
+                </div>
+                <div class="pricing-info-card">
+                    <h4><svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path d="M12 2a7 7 0 0 0-5 11.9V16a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2.1A7 7 0 0 0 12 2z" />
+                        </svg> Informacje</h4>
+                    <ul>
+                        <li>Wszystkie podane ceny są <strong>kwotami brutto (pełnymi)</strong></li>
+                        <li>Rozliczenia i faktury realizowane są <strong>za pośrednictwem portalu Useme</strong></li>
+                        <li>Cena obejmuje <strong>projekt i wykonanie strony</strong></li>
+                        <li>Strona firmowa (599-999 zł) – <strong>cena zależy od zakresu</strong>: każdy projekt tworzę
+                            indywidualnie pod potrzeby Twojej firmy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-fade">
+                <a href="uslugi.html" class="btn btn-primary magnetic">
+                    <span>Zobacz pełną ofertę</span>
+                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;współpraca&gt;</span>
+                <h2 class="section-title reveal-fade">Prościej się nie da</h2>
+                <p class="section-subtitle reveal-fade">Szanuję Twój czas. Nie robię niekończących się spotkań. Działam
+                    konkretnie.</p>
+            </div>
+
+            <div class="process-steps process-steps-grid">
+
+                <div class="process-step reveal-stagger"
+                    style="flex-direction: column; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2);">
+                    <div class="step-number"
+                        style="margin: 0 auto var(--space-md); background: var(--bg-card); border: 2px solid var(--accent-primary); color: var(--accent-primary);">
+                        1</div>
+                    <div class="step-content">
+                        <h3 style="font-size: 1.2rem;">Wybierasz pakiet</h3>
+                        <p>Piszesz do mnie lub dzwonisz. Mówisz, czego potrzebujesz (np. "Firma na Start"). Rezerwujemy
+                            termin.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-stagger"
+                    style="flex-direction: column; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2);">
+                    <div class="step-number"
+                        style="margin: 0 auto var(--space-md); background: var(--bg-card); border: 2px solid var(--accent-secondary); color: var(--accent-secondary);">
+                        2</div>
+                    <div class="step-content">
+                        <h3 style="font-size: 1.2rem;">Ja robię magię</h3>
+                        <p>Ty zajmujesz się swoim biznesem, a ja w 3-5 dni stawiam kompletną stronę, piszę teksty i
+                            konfiguruję mapy.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-stagger"
+                    style="flex-direction: column; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2);">
+                    <div class="step-number"
+                        style="margin: 0 auto var(--space-md); background: var(--gradient-primary); border: none; color: white;">
+                        3</div>
+                    <div class="step-content">
+                        <h3 style="font-size: 1.2rem;">Gotowe!</h3>
+                        <p>Oglądasz efekt. Jeśli Ci się podoba – opłacasz resztę, a strona zaczyna dla Ciebie pracować.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-cta reveal-fade" style="margin-top: 3rem;">
+                <a href="uslugi.html" class="btn btn-primary magnetic">
+                    <span>Zobacz pakiety i ceny</span>
+                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Preview -->
+    <section class="section projects-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;projekty&gt;</span>
+                <h2 class="section-title reveal-fade">Moje realizacje</h2>
+                <p class="section-subtitle reveal-fade">Wybrane realizacje z mojego portfolio. Pełną galerię znajdziesz
+                    w zakładce <a href="projekty.html" style="color: var(--accent-gold);">Projekty</a>.</p>
+            </div>
+
+            <div class="featured-projects">
+                <!-- Słoneczny Dotyk -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5"
+                        data-gallery="slonecznydotyk">
+                        <img src="assets/sloneczny-dotyk-preview.png" alt="Słoneczny Dotyk - strona solarium">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>Słoneczny Dotyk</h3>
+                        <p class="featured-project-desc">
+                            Elegancka strona firmowa dla studia solarium premium. Ciepła kolorystyka w odcieniach złota
+                            i beżu, responsywny design i płynne animacje tworzą luksusowe wrażenie. Strona zawiera
+                            sekcje: o nas, usługi, cennik, galerię wnętrza lokalu, FAQ oraz formularz kontaktowy. Strona
+                            na obecny stan nie została jeszcze wdrożona.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://stxworks.pl/sloneczny-dotyk" class="btn btn-secondary btn-small magnetic"
+                                target="_blank" rel="noopener">
+                                <span>Zobacz stronę</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- GreenSpace -->
+                <article class="featured-project reveal-fade">
+                    <div class="featured-project-image tilt-card" data-tilt data-tilt-max="5" data-gallery="greenspace">
+                        <img src="assets/greenspace-preview.png" alt="GreenSpace - strona ogrodnicza">
+                        <div class="image-zoom-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                            <span>Kliknij, aby powiększyć</span>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <h3>GreenSpace</h3>
+                        <p class="featured-project-desc">
+                            Profesjonalna strona dla firmy z branży ogrodnictwa, z dbałością o estetykę i użyteczność
+                            witryny. Projekt obejmuje szeroką galerię realizacji, przejrzysty cennik, stronę zespołu
+                            oraz intuicyjny formularz kontaktowy. Strona powstała w celu demonstracji umiejętności
+                            tworzenia stron internetowych.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech-mini">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://stxworks.pl/greenspace" class="btn btn-secondary btn-small magnetic"
+                                target="_blank" rel="noopener">
+                                <span>Zobacz stronę</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-cta reveal-fade">
+                <a href="projekty.html" class="btn btn-primary magnetic">
+                    <span>Zobacz wszystkie projekty</span>
+                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOWA SEKCJA - DO UZUPEŁNIENIA -->
+
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content reveal-fade">
+                <h2 class="cta-title">Masz pytanie albo chcesz wycenę?</h2>
+                <p class="cta-text">Napisz - odpowiadam maksymalnie do 24h.</p>
+                <a href="kontakt.html" class="btn btn-primary btn-large magnetic">
+                    <span>Skontaktuj się</span>
+                    <svg class="btn-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Lightbox Gallery Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Zamknij">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Poprzednie">&lsaquo;</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="Powiększenie">
+        <button class="lightbox-nav lightbox-next" aria-label="Następne">&rsaquo;</button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

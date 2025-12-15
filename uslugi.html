@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi | STX Works</title>
+    <meta name="description"
+        content="Oferta usług STX Works - tworzenie stron internetowych, aplikacji webowych i projektowanie UI/UX.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stxworks.pl/uslugi.html">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stxworks.pl/uslugi.html">
+    <meta property="og:title" content="Usługi i cennik | STX Works">
+    <meta property="og:description"
+        content="Oferta usług STX Works - tworzenie stron internetowych, aplikacji webowych i projektowanie UI/UX.">
+    <meta property="og:image" content="https://stxworks.pl/og-image.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="STX Works">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Usługi i cennik | STX Works">
+    <meta name="twitter:description"
+        content="Oferta usług STX Works - tworzenie stron internetowych, aplikacji webowych i projektowanie UI/UX.">
+    <meta name="twitter:image" content="https://stxworks.pl/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <!-- Mouse Trail -->
+    <canvas class="mouse-trail" id="mouse-trail"></canvas>
+
+    <!-- Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="section services-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;usługi&gt;</span>
+                <h1 class="section-title reveal-fade">Co mogę dla Ciebie stworzyć?</h1>
+                <p class="section-subtitle reveal-fade">Oferuję kompleksowe usługi webowe - od prostych stron po
+                    zaawansowane aplikacje.</p>
+            </div>
+
+            <!-- PAKIET ALL-IN-ONE - Specjalna oferta -->
+            <div class="special-offer-section reveal-fade" style="margin-bottom: var(--space-4xl);">
+                <div class="pricing-card featured tilt-card"
+                    style="border-color: var(--accent-gold); background: linear-gradient(180deg, rgba(212, 165, 116, 0.05) 0%, var(--bg-card) 100%); width: 100%; transform: none;"
+                    data-tilt data-tilt-max="3">
+                    <div class="pricing-badge" style="background: var(--gradient-accent); color: #000;">Najbardziej
+                        Opłacalne</div>
+
+                    <div class="pricing-content-wrapper" style="padding: var(--space-lg);">
+                        <h3 class="pricing-name" style="font-size: 2rem; margin-bottom: var(--space-xs);">Pakiet "Firma
+                            na Start"</h3>
+                        <p class="pricing-desc" style="color: var(--accent-gold);">Wszystko, czego potrzebujesz, żeby
+                            ruszyć z biznesem – w jednej cenie.</p>
+
+                        <div
+                            style="display: flex; gap: var(--space-xl); align-items: center; justify-content: center; margin: var(--space-lg) 0; flex-wrap: wrap;">
+                            <div class="pricing-price" style="font-size: 3rem;">1599 zł</div>
+                            <div style="text-align: left; font-size: 0.95rem; color: var(--text-muted);">
+                                <span style="opacity: 0.8;">Wartość usług osobno: <span
+                                        style="text-decoration: line-through;">1950 zł</span></span><br>
+                                <span style="color: var(--accent-green); font-weight: 600;">Oszczędzasz: 350 zł</span>
+                            </div>
+                        </div>
+
+                        <div class="package-features-grid"
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); text-align: left; margin-bottom: var(--space-xl);">
+                            <ul class="pricing-features">
+                                <li><strong>Strona Firmowa</strong> (wersja rozszerzona)</li>
+                                <li><strong>Hosting i domena .pl</strong> na rok GRATIS</li>
+                                <li><strong>Certyfikat SSL</strong> (bezpieczeństwo)</li>
+                            </ul>
+                            <ul class="pricing-features">
+                                <li><strong>Teksty na stronę</strong> (Copywriting)</li>
+                                <li><strong>Wizytówka Google Maps</strong> (konfiguracja)</li>
+                                <li><strong>Projekt Logo</strong> (3 propozycje)</li>
+                            </ul>
+                        </div>
+
+                        <a href="kontakt.html?usluga=pakiet-firma" class="btn btn-primary btn-large magnetic"
+                            style="width: 100%; justify-content: center;">
+                            <span>Zamawiam Pakiet All-in-One</span>
+                            <svg class="btn-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </a>
+                        <p style="margin-top: var(--space-md); font-size: 0.85rem; color: var(--text-muted);">Czas
+                            realizacji: 3-5 dni roboczych</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="pricing-grid">
+                <!-- Wizytówka Online START -->
+                <div class="pricing-card reveal-stagger tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-badge" style="background: var(--accent-tertiary);">START</div>
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="2" width="16" height="20" rx="2" />
+                            <path d="M8 6h8M8 10h8M8 14h4" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Wizytówka Online</h3>
+                    <div class="pricing-price">399 zł</div>
+                    <p class="pricing-period">brutto</p>
+                    <p class="pricing-desc">Dla firm, które chcą szybko i prosto zaistnieć w internecie.</p>
+                    <ul class="pricing-features">
+                        <li>Nowoczesny wygląd</li>
+                        <li>Wersja mobilna</li>
+                        <li>Sekcje: oferta, o firmie, kontakt</li>
+                        <li>Realizacja 2–3 dni</li>
+                    </ul>
+                    <a href="kontakt.html?usluga=wizytowka" class="btn btn-secondary magnetic">
+                        <span>Zamów wizytówkę</span>
+                    </a>
+                </div>
+
+                <!-- Strona firmowa - REKOMENDOWANE -->
+                <div class="pricing-card featured reveal-stagger tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-badge">Rekomendowane</div>
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Strona firmowa</h3>
+                    <div class="pricing-price">599-999 zł</div>
+                    <p class="pricing-period">brutto</p>
+                    <p class="pricing-desc">Pełna strona dla małych i lokalnych firm.</p>
+                    <ul class="pricing-features">
+                        <li>Kilka podstron</li>
+                        <li>Indywidualny wygląd</li>
+                        <li>Wersja mobilna</li>
+                        <li>Realizacja w kilka dni</li>
+                    </ul>
+                    <a href="kontakt.html?usluga=strona-firmowa" class="btn btn-primary magnetic">
+                        <span>Zamów stronę firmową</span>
+                    </a>
+                </div>
+
+                <!-- Projekt indywidualny -->
+                <div class="pricing-card reveal-stagger tilt-card" data-tilt data-tilt-max="5">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Projekt indywidualny</h3>
+                    <div class="pricing-price">od 1 000 zł</div>
+                    <p class="pricing-period">brutto • wycena indywidualna</p>
+                    <p class="pricing-desc">Dla bardziej rozbudowanych lub niestandardowych projektów.</p>
+                    <ul class="pricing-features">
+                        <li>Większa liczba podstron</li>
+                        <li>Dodatkowe funkcje</li>
+                        <li>Pełne dopasowanie do potrzeb firmy</li>
+                    </ul>
+                    <a href="kontakt.html?usluga=projekt-indywidualny" class="btn btn-secondary magnetic">
+                        <span>Zapytaj o wycenę</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gwarancja Bezpiecznej Współpracy -->
+            <div class="guarantee-section reveal-fade"
+                style="max-width: 100%; margin: var(--space-2xl) auto var(--space-4xl); padding: 0;">
+                <div class="guarantee-box tilt-card" data-tilt data-tilt-max="3" style="
+                    background: rgba(34, 197, 94, 0.05); 
+                    border: 1px solid rgba(34, 197, 94, 0.3); 
+                    border-radius: var(--radius-md); 
+                    padding: var(--space-lg); 
+                    display: flex; 
+                    align-items: center; 
+                    gap: var(--space-lg);
+                    position: relative;
+                    overflow: hidden;
+                    transition: var(--transition-medium);
+                    cursor: default;
+                ">
+                    <div
+                        style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 60%); pointer-events: none;">
+                    </div>
+
+                    <div class="guarantee-icon" style="
+                        flex-shrink: 0;
+                        width: 60px; 
+                        height: 60px; 
+                        background: rgba(34, 197, 94, 0.1); 
+                        border-radius: 50%; 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        color: var(--accent-green);
+                    ">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+
+                    <div class="guarantee-content" style="position: relative; z-index: 1; text-align: left;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: var(--space-xs);">
+                            Gwarancja Bezpiecznej Współpracy
+                        </h4>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Pracuję w uczciwym modelu <strong>20/80</strong>.
+                            Wpłacasz jedynie <strong>20% zaliczki</strong> na start rezerwującą termin.
+                            Pozostałe 80% płacisz <span style="color: var(--accent-green); font-weight: 600;">dopiero,
+                                gdy zobaczysz gotowy projekt</span> i go zaakceptujesz. Zero ryzyka – płacisz za efekt.
+                            Każda realizacja jest <strong>klarowna i bezpieczna</strong> – współpraca odbywa się na
+                            podstawie <strong>umowy podpisywanej przez Useme</strong>, a na każdą transakcję wystawiana
+                            jest <strong>faktura VAT</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co dostajesz na koniec (Deliverables) -->
+            <div class="deliverables-section reveal-fade" style="margin: var(--space-3xl) auto;">
+                <div class="section-header" style="margin-bottom: var(--space-xl);">
+                    <h3 class="section-title" style="font-size: 1.8rem;">Co dostajesz na koniec?</h3>
+                    <p class="section-subtitle">Zamiast pustych obietnic – konkretna lista tego, co otrzymujesz.</p>
+                </div>
+
+                <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-primary);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Pełne pliki strony</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">ZIP lub dostęp FTP – wszystko Twoje po
+                            opłaceniu</p>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-secondary);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" y1="18" x2="12" y2="18" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Responsywność</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Test na telefonie, tablecie i desktopie
+                            – wszystko działa</p>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-green);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Podstawowe SEO</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Meta tagi, Open Graph, sitemap – gotowe
+                            do indeksacji</p>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-tertiary);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Formularz kontaktowy</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Maile prosto na Twoją skrzynkę –
+                            działający od dnia 1</p>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-gold);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">14 dni wsparcia</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Po wdrożeniu – drobne poprawki i pytania
+                            w cenie</p>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5" style="text-align: center;">
+                        <div class="pricing-icon" style="color: var(--accent-primary);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <polyline points="9 12 11 14 15 10" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Pełne prawa</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Po opłaceniu projekt jest w 100% Twój –
+                            żadnych ograniczeń</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sekcja Dodatków (Upselling) -->
+            <div class="addons-container reveal-fade"
+                style="margin-top: var(--space-4xl); margin-bottom: var(--space-4xl);">
+                <div class="section-header" style="margin-bottom: var(--space-xl);">
+                    <h3 class="section-title" style="font-size: 1.8rem;">Rozszerz swój pakiet</h3>
+                    <p class="section-subtitle">Klienci najczęściej dobierają te usługi do stron firmowych.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                        <div class="pricing-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="pricing-name">Copywriting</h3>
+                        <div class="pricing-price">249 zł</div>
+                        <p class="pricing-period">jednorazowo</p>
+                        <p class="pricing-desc">Nie wiesz co napisać? Napiszę profesjonalne, sprzedażowe treści na Twoją
+                            stronę za Ciebie.</p>
+                        <a href="kontakt.html?usluga=copywriting" class="btn btn-secondary magnetic"
+                            style="margin-top: auto;">
+                            <span>Dodaj do projektu</span>
+                        </a>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                        <div class="pricing-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="pricing-name">Wizytówka Google</h3>
+                        <div class="pricing-price">199 zł</div>
+                        <p class="pricing-period">jednorazowo</p>
+                        <p class="pricing-desc">Pełna konfiguracja profilu firmy w Mapach Google, aby klienci z okolicy
+                            łatwo Cię znaleźli.</p>
+                        <a href="kontakt.html?usluga=wizytowka-google" class="btn btn-secondary magnetic"
+                            style="margin-top: auto;">
+                            <span>Dodaj do projektu</span>
+                        </a>
+                    </div>
+
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                        <div class="pricing-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                <line x1="9" y1="9" x2="9.01" y2="9" />
+                                <line x1="15" y1="9" x2="15.01" y2="9" />
+                            </svg>
+                        </div>
+                        <h3 class="pricing-name">Logo na start</h3>
+                        <div class="pricing-price">299 zł</div>
+                        <p class="pricing-period">jednorazowo</p>
+                        <p class="pricing-desc">Prosty, estetyczny znak graficzny lub logotyp tekstowy. Otrzymasz 3
+                            propozycje do wyboru.</p>
+                        <a href="kontakt.html?usluga=logo" class="btn btn-secondary magnetic" style="margin-top: auto;">
+                            <span>Dodaj do projektu</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informacje o cenach -->
+            <div class="pricing-info reveal-fade"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+
+                <div class="pricing-info-card">
+                    <h4><svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg> Hosting i domena</h4>
+                    <ul>
+                        <li><strong>Opcja 1:</strong> Masz własne? Podepniemy je bezpłatnie.</li>
+                        <li><strong>Opcja 2:</strong> Oferta STX Works – <strong>149 zł/rok</strong> (serwer + domena
+                            .pl + SSL). Wszystko załatwiam za Ciebie.</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-info-card" style="border-color: var(--accent-primary);">
+                    <h4><svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg> Pakiet Spokoju (Opieka)</h4>
+                    <ul>
+                        <li>Aktualizacje bezpieczeństwa, kopie zapasowe i drobne zmiany treści przez cały rok.</li>
+                        <li><strong>Cena: 399 zł / rok</strong> (płatne z góry).</li>
+                        <li><span style="color: var(--accent-green); font-size: 0.85rem;">Śpisz spokojnie, ja pilnuję
+                                strony.</span></li>
+                    </ul>
+                </div>
+
+                <div class="pricing-info-card"
+                    style="grid-column: 1 / -1; background: linear-gradient(90deg, rgba(255, 95, 86, 0.1), transparent);">
+                    <h4 style="color: #ff5f56;">
+                        <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        Potrzebujesz strony "na wczoraj"?
+                    </h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0;">
+                        Wybierz usługę <strong>Express Realizacja 48h</strong> (obejmuje pracę w weekendy). <br>
+                        Dopłata: <strong>+30% wartości zamówienia</strong>. Priorytetowe traktowanie Twojego projektu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Rebranding -->
+            <div class="rebranding-section reveal-fade">
+                <h3 class="rebranding-title">Rebranding istniejącej strony</h3>
+                <p class="rebranding-desc">Masz stronę, która wygląda <span
+                        style="color: var(--accent-gold);">przestarzale</span> lub nie pasuje już do Twojej marki?
+                    Rebranding to <span style="color: var(--accent-gold);">szybszy i tańszy</span> sposób na odświeżenie
+                    wizerunku – bez budowania wszystkiego od zera.
+                    Zachowujesz strukturę i treści, a ja zmieniam <span style="color: var(--accent-gold);">design,
+                        kolory i układ</span>, żeby strona znów wyglądała
+                    <span style="color: var(--accent-gold);">profesjonalnie</span>.
+                </p>
+
+                <div class="pricing-grid rebranding-grid">
+                    <!-- Rebranding Strony firmowej -->
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                        <div class="pricing-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="pricing-name">Rebranding Strony Firmowej</h3>
+                        <div class="pricing-price">299–499 zł</div>
+                        <p class="pricing-period">brutto • ok. 50% ceny nowej strony</p>
+                        <ul class="pricing-features">
+                            <li>Nowa kolorystyka + typografia</li>
+                            <li>Przebudowa sekcji</li>
+                            <li>Poprawa UX</li>
+                            <li>Desktop + mobile</li>
+                        </ul>
+                        <a href="kontakt.html?usluga=rebranding" class="btn btn-secondary magnetic">
+                            <span>Zamów rebranding</span>
+                        </a>
+                    </div>
+
+                    <!-- Rebranding Projektu indywidualnego -->
+                    <div class="pricing-card tilt-card" data-tilt data-tilt-max="5">
+                        <div class="pricing-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="pricing-name">Rebranding Większego Projektu</h3>
+                        <div class="pricing-price">od 499 zł</div>
+                        <p class="pricing-period">brutto • wycena indywidualna</p>
+                        <ul class="pricing-features">
+                            <li>Zakres ustalany indywidualnie</li>
+                            <li>Zależny od liczby podstron</li>
+                            <li>Możliwa wycena po audycie</li>
+                        </ul>
+                        <a href="kontakt.html?usluga=rebranding" class="btn btn-secondary magnetic">
+                            <span>Zapytaj o wycenę</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;proces&gt;</span>
+                <h2 class="section-title reveal-fade">Jak wygląda współpraca?</h2>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step reveal-stagger">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Wybierasz pakiet i rezerwujesz</h3>
+                        <p>Decydujesz, czego potrzebujesz (np. Wizytówka lub Pakiet na Start). Wpłacasz tylko
+                            <strong>20% zaliczki</strong>, żeby zarezerwować termin. Bez zbędnych spotkań.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-stagger">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Realizacja (3-5 dni)</h3>
+                        <p>Nie tracę czasu na makiety. Od razu przygotowuję <strong>działającą wersję strony</strong>.
+                            Dostajesz prywatny link i widzisz efekty na żywo na swoim telefonie.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-stagger">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Twoje uwagi i finał</h3>
+                        <p>To czas na szlify. Wprowadzam Twoje poprawki. Dopiero gdy powiesz <strong>"Tak, o to
+                                chodziło!"</strong>, opłacasz pozostałe 80% kwoty.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-stagger">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Wdrożenie i spokój</h3>
+                        <p>Podpinam domenę, konfiguruję serwer i szyfrowanie SSL. Przekazuję Ci hasła i gotowe. Twoja
+                            firma oficjalnie działa w sieci.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-fade" style="margin-top: 3rem;">
+                <p style="font-size: 1.2rem; color: var(--text-secondary); text-align: center; font-weight: 500;">
+                    Prościej się nie da. <span style="color: var(--accent-green);">Zero ryzyka, płatność za
+                        efekt.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jak zamówić -->
+    <section class="section order-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;zamów&gt;</span>
+                <h2 class="section-title reveal-fade">Jak zamówić?</h2>
+                <p class="section-subtitle reveal-fade">Wybierz wygodną dla siebie formę kontaktu</p>
+            </div>
+
+            <div class="order-grid reveal-fade">
+                <a href="mailto:kontakt@stxworks.pl" class="pricing-card tilt-card" data-tilt data-tilt-max="5"
+                    style="text-decoration: none; cursor: pointer;">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Email</h3>
+                    <p class="pricing-desc">kontakt@stxworks.pl</p>
+                </a>
+
+                <a href="tel:+48693459978" class="pricing-card tilt-card" data-tilt data-tilt-max="5"
+                    style="text-decoration: none; cursor: pointer;">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Telefon</h3>
+                    <p class="pricing-desc">+48 693 459 978</p>
+                </a>
+
+                <a href="kontakt.html" class="pricing-card tilt-card order-form-card" data-tilt data-tilt-max="5"
+                    style="text-decoration: none; cursor: pointer;">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="pricing-name">Formularz</h3>
+                    <p class="pricing-desc">Opisz swój projekt w formularzu kontaktowym. Odpowiem do 24h.</p>
+                </a>
+            </div>
+
+            <p class="reveal-fade"
+                style="text-align: center; margin-top: var(--space-xl); color: var(--text-muted); font-size: 0.9rem;">
+                Nie wiesz, który pakiet wybrać? Napisz – pomogę dobrać rozwiązanie do Twoich potrzeb.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-fade">&lt;faq&gt;</span>
+                <h2 class="section-title reveal-fade">Często zadawane pytania</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        Nie wiem, co wybrać – od czego zacząć?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zacznij od podstaw: potrzebujesz prostej strony z kontaktem i ofertą? Wizytówka wystarczy.
+                            Masz więcej do pokazania i chcesz kilka podstron? Strona firmowa będzie lepsza. A jeśli
+                            dopiero startujesz z biznesem i nie chcesz się martwić o logo, teksty czy hosting – weź
+                            Pakiet „Firma na Start", bo masz wszystko w jednym i oszczędzasz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        Boję się, że zapłacę i nic nie dostanę...
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rozumiem, internet pełen jest historii o nieuczciwych „twórcach stron". Właśnie dlatego
+                            pracuję przez Useme – podpisujesz ze mną oficjalną umowę, a większość kasy (80%) płacisz
+                            dopiero jak zobaczysz gotową stronę i powiesz „tak, biorę". Plus dostajesz fakturę VAT.
+                            Żadnego ryzyka.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        Ile to w ogóle potrwa?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zazwyczaj kilka dni roboczych – mówię o realnej, działającej stronie, nie o projektach w
+                            Photoshopie. Jeśli goni Cię czas, mogę zrobić to w 48 godzin (ekspres kosztuje trochę
+                            więcej, ale wtedy Twój projekt ląduje na szczycie mojej listy, nawet w weekend).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        A co z hostingiem i domeną? Muszę to sam ogarnąć?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nie musisz. Jeśli już masz hosting albo domenę – podepnę je bez problemu. Jeśli nie masz,
+                            mogę Ci to załatwić (149 zł na rok za wszystko razem). W Pakiecie „Firma na Start" pierwszy
+                            rok masz gratis, więc w ogóle nie musisz o tym myśleć.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        Co potem? Strona będzie wymagać opieki?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Strona statyczna (HTML) nie wymaga praktycznie niczego. Ale jeśli wolisz mieć spokój i nie
+                            myśleć o backupach czy drobnych zmianach treści – jest Pakiet Spokoju. Za 399 zł rocznie
+                            pilnuję wszystkiego za Ciebie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal-fade">
+                    <button class="faq-question">
+                        Mam już stronę, ale wygląda jak z 2010 roku...
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Znam to. Nie musisz budować wszystkiego od nowa – wystarczy rebranding. Zachowujesz treści, a
+                            ja zmieniam wygląd na współczesny. Szybciej i taniej niż nowa strona. Napisz, pokażesz mi
+                            stronę, powiem Ci co da się zrobić.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="cta-content reveal-fade">
+                <h2 class="cta-title">Masz pomysł na stronę?</h2>
+                <p class="cta-text">Opisz mi swoją wizję – odpiszę w ciągu kilku godzin. Zero zobowiązań, zwykła
+                    rozmowa. A jak będziesz pewny, ruszamy.</p>
+                <a href="kontakt.html" class="btn btn-primary btn-large magnetic">
+                    <span>Napisz do mnie</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
