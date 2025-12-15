@@ -15,11 +15,11 @@ function getNavHTML() {
     const currentPage = getCurrentPage();
 
     const navLinks = [
-        { href: 'index.html', text: 'Start' },
-        { href: 'projekty.html', text: 'Projekty' },
-        { href: 'uslugi.html', text: 'Usługi' },
-        { href: 'o-mnie.html', text: 'O mnie' },
-        { href: 'kontakt.html', text: 'Kontakt' }
+        { href: '/', text: 'Start' },
+        { href: '/projekty', text: 'Projekty' },
+        { href: '/uslugi', text: 'Usługi' },
+        { href: '/o-mnie', text: 'O mnie' },
+        { href: '/kontakt', text: 'Kontakt' }
     ];
 
     const linksHTML = navLinks.map(link => {
@@ -31,7 +31,7 @@ function getNavHTML() {
     return `
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo magnetic" data-strength="20">
+            <a href="/" class="nav-logo magnetic" data-strength="20">
                 <div class="logo-gear-wrapper">
                     <svg class="logo-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="16 18 22 12 16 6"/>
@@ -57,7 +57,7 @@ function getFooterHTML() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
+                    <a href="/" class="footer-logo">
                         <div class="logo-gear-wrapper">
                             <svg class="logo-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="16 18 22 12 16 6"/>
@@ -73,11 +73,11 @@ function getFooterHTML() {
                 <div class="footer-section">
                     <h4>Nawigacja</h4>
                     <div class="footer-links">
-                        <a href="index.html">Start</a>
-                        <a href="projekty.html">Projekty</a>
-                        <a href="uslugi.html">Usługi</a>
-                        <a href="o-mnie.html">O mnie</a>
-                        <a href="kontakt.html">Kontakt</a>
+                        <a href="/">Start</a>
+                        <a href="/projekty">Projekty</a>
+                        <a href="/uslugi">Usługi</a>
+                        <a href="/o-mnie">O mnie</a>
+                        <a href="/kontakt">Kontakt</a>
                     </div>
                 </div>
 
